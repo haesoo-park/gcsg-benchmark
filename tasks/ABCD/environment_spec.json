@@ -1,0 +1,23 @@
+{
+  "environment_name": "ABCD",
+  "zones": ["atmosphere", "biomass", "geosphere", "reservoir"],
+  "dependencies": {
+    "atmosphere": "biomass",
+    "biomass": "geosphere",
+    "geosphere": "reservoir",
+    "reservoir": "atmosphere"
+  },
+  "input_action_by_zone": {
+    "atmosphere": "AIR",
+    "biomass": "PLANT",
+    "geosphere": "MINERAL",
+    "reservoir": "WATER"
+  },
+  "primitive_template_by_zone": {
+    "atmosphere": ["BIOMASS_INPUT", "LIGHT", "PHOTOSYNTHESIS"],
+    "biomass": ["SOW", "GEOSPHERE_INPUT", "FERTILIZE"],
+    "geosphere": ["DRILL", "RESERVOIR_INPUT", "REFINE"],
+    "reservoir": ["TIME", "FILTER", "ATMOSPHERE_INPUT"]
+  },
+  "state_update_regime": "permanent"
+}

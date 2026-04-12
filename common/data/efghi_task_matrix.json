@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "task_id": "EFGHI",
+      "status": "active",
+      "goal": "EFGHI Transfer Environment for GCSG Task 8",
+      "main_environment": "EFGHI",
+      "bad_quality_level_range": {
+        "min": 4,
+        "max": 12
+      },
+      "seeds": {
+        "split_seed": 20260801,
+        "runtime_sampling_seed": 20260802,
+        "schedule_seed": 20260803
+      },
+      "protocol": {
+        "train_split_name": "train",
+        "test_split_name": "test",
+        "train_ratio_per_level": 0.70,
+        "probe_after_train_missions": 3,
+        "test_missions_are_probes": true
+      }
+    }
+  ]
+}

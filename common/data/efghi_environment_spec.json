@@ -1,0 +1,26 @@
+{
+  "environment_name": "EFGHI",
+  "zones": ["furnace", "pipeline", "conduit", "archive", "basin"],
+  "dependencies": {
+    "furnace": "pipeline",
+    "pipeline": "conduit",
+    "conduit": "archive",
+    "archive": "basin",
+    "basin": "furnace"
+  },
+  "input_action_by_zone": {
+    "furnace": "HEAT",
+    "pipeline": "FLOW",
+    "conduit": "WIRE",
+    "archive": "DATA",
+    "basin": "FLUID"
+  },
+  "primitive_template_by_zone": {
+    "furnace": ["PIPELINE_INPUT", "IGNITE", "SMELT", "TEMPER"],
+    "pipeline": ["PUMP", "CONDUIT_INPUT", "PRESSURIZE"],
+    "conduit": ["ROUTE", "INSULATE", "ARCHIVE_INPUT", "SEAL"],
+    "archive": ["BASIN_INPUT", "CATALOG"],
+    "basin": ["DRAIN", "FURNACE_INPUT", "CYCLE"]
+  },
+  "state_update_regime": "permanent"
+}

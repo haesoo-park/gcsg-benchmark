@@ -1,0 +1,20 @@
+{
+  "context_init_options": ["a", "b", "c"],
+  "context_init_labels": {
+    "a": "Baseline + Environment + Composition System",
+    "b": "Baseline + Environment",
+    "c": "Baseline only"
+  },
+  "prompt_styles": [
+    "canonical",
+    "zone_reordered",
+    "word_resource_absent",
+    "prose_like",
+    "zone_name_absent"
+  ],
+  "prompt_style_config_options": {
+    "a": "Train and test on only canonical style",
+    "b": "Randomly assign a prompt style for both training and testing trials",
+    "c": "Train only on canonical style. Randomly assign a non-canonical prompt style for testing trials"
+  }
+}

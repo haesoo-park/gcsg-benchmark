@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "task_id": "ABCD",
+      "status": "active",
+      "goal": "G-SRCG AGI Benchmark v2: Goal-Structure Learning and Compositional Generalization",
+      "main_environment": "ABCD",
+      "bad_quality_level_range": {
+        "min": 4,
+        "max": 12
+      },
+      "seeds": {
+        "split_seed": 20260701,
+        "runtime_sampling_seed": 20260702,
+        "schedule_seed": 20260703
+      },
+      "protocol": {
+        "train_split_name": "train",
+        "test_split_name": "test",
+        "train_ratio_per_level": 0.70,
+        "probe_after_train_missions": 3,
+        "test_missions_are_probes": true
+      },
+      "level_split_targets": {
+        "level_1": { "total_count": 8, "train_count": 6, "test_count": 2 },
+        "level_2": { "total_count": 16, "train_count": 11, "test_count": 5 },
+        "level_3": { "total_count": 32, "train_count": 22, "test_count": 10 }
+      },
+      "state_level_split_targets": {
+        "level_1": { "total_count": 72 },
+        "level_2": { "total_count": 48 },
+        "level_3": { "total_count": 32 }
+      }
+    }
+  ]
+}
