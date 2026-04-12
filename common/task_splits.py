@@ -477,6 +477,17 @@ def _allocate_from_csv(
     probe_rows = [r for r in rows if str(r[col]) == "probe"]
     unused_rows = [r for r in rows if str(r[col]) not in ("train", "probe")]
 
+    # Sort by presentation order column if available (eliminates curriculum bias)
+    order_col = f"t{task_number}_order"
+    if order_col in df.columns:
+        def _order_key(r: dict) -> int:
+            v = r.get(order_col)
+            if pd.isna(v):
+                return 999999
+            return int(v)
+        train_rows.sort(key=_order_key)
+        probe_rows.sort(key=_order_key)
+
     summary = {
         "split_option": f"canonical-t{task_number}",
         "base_split": split_option,

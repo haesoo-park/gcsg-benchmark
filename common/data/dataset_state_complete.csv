@@ -1,153 +1,153 @@
-task_id,mission_id,source_mission_id,goal_level,mission_split,split_index,target_zone,atmosphere_condition,biomass_condition,geosphere_condition,reservoir_condition,template_id,gold_action_sequence,t1_split,t2_split,t3_split,t4_split,t5_split,t6_split,t7_split,t8_split,t9_split,t10_split,t11_split
-ABCD,L1-0045,abcd_state_0050,1,train,1,geosphere,low_resource,low_resource,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",probe,probe,probe,,,,probe,probe,probe,,
-ABCD,L1-0021,abcd_state_0035,1,train,2,biomass,bad_quality,bad_quality,ideal,low_resource,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",probe,probe,probe,,,,probe,probe,probe,,
-ABCD,L1-0029,abcd_state_0025,1,train,3,biomass,bad_quality,low_resource,ideal,ideal,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0044,abcd_state_0049,1,train,4,geosphere,low_resource,ideal,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0032,abcd_state_0019,1,train,5,biomass,ideal,low_resource,ideal,ideal,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0028,abcd_state_0027,1,train,6,biomass,bad_quality,low_resource,ideal,bad_quality,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0031,abcd_state_0021,1,train,7,biomass,ideal,low_resource,ideal,bad_quality,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",train,train,train,train,,train,train,train,train,train,train
-ABCD,L1-0001,abcd_state_0018,1,train,8,atmosphere,bad_quality,ideal,bad_quality,bad_quality,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0010,abcd_state_0009,1,train,9,atmosphere,low_resource,ideal,bad_quality,bad_quality,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,probe,,,,,,
-ABCD,L1-0042,abcd_state_0047,1,train,10,geosphere,ideal,low_resource,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0070,abcd_state_0060,1,train,11,reservoir,ideal,low_resource,bad_quality,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0051,abcd_state_0038,1,train,12,geosphere,ideal,low_resource,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,train,,,,,,
-ABCD,L1-0049,abcd_state_0039,1,train,13,geosphere,ideal,bad_quality,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",train,train,train,train,,train,train,train,train,train,train
-ABCD,L1-0053,abcd_state_0040,1,train,14,geosphere,low_resource,ideal,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0064,abcd_state_0063,1,train,15,reservoir,ideal,bad_quality,bad_quality,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,probe,,,,,,
-ABCD,L1-0006,abcd_state_0011,1,train,16,atmosphere,bad_quality,ideal,ideal,low_resource,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0047,abcd_state_0043,1,train,17,geosphere,bad_quality,ideal,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0009,abcd_state_0014,1,train,18,atmosphere,bad_quality,ideal,low_resource,low_resource,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0054,abcd_state_0041,1,train,19,geosphere,low_resource,low_resource,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0050,abcd_state_0037,1,train,20,geosphere,ideal,ideal,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0007,abcd_state_0015,1,train,21,atmosphere,bad_quality,ideal,low_resource,bad_quality,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",train,train,train,train,,train,train,train,train,train,train
-ABCD,L1-0002,abcd_state_0016,1,train,22,atmosphere,bad_quality,ideal,bad_quality,ideal,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0065,abcd_state_0061,1,train,23,reservoir,ideal,bad_quality,ideal,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",probe,probe,probe,,,,probe,probe,probe,,
-ABCD,L1-0055,abcd_state_0072,1,train,24,reservoir,ideal,bad_quality,bad_quality,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",probe,probe,probe,,probe,,probe,probe,probe,,
-ABCD,L1-0034,abcd_state_0024,1,train,25,biomass,low_resource,low_resource,ideal,bad_quality,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",probe,probe,probe,,probe,,probe,probe,probe,,
-ABCD,L1-0067,abcd_state_0057,1,train,26,reservoir,ideal,ideal,bad_quality,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0062,abcd_state_0067,1,train,27,reservoir,ideal,low_resource,ideal,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,train,,,,,,
-ABCD,L1-0030,abcd_state_0026,1,train,28,biomass,bad_quality,low_resource,ideal,low_resource,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",train,train,train,train,,train,train,train,train,train,train
-ABCD,L1-0059,abcd_state_0064,1,train,29,reservoir,ideal,ideal,ideal,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0018,abcd_state_0005,1,train,30,atmosphere,low_resource,ideal,low_resource,low_resource,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0035,abcd_state_0022,1,train,31,biomass,low_resource,low_resource,ideal,ideal,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0063,abcd_state_0068,1,train,32,reservoir,ideal,low_resource,low_resource,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0008,abcd_state_0013,1,train,33,atmosphere,bad_quality,ideal,low_resource,ideal,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,probe,,
-ABCD,L1-0068,abcd_state_0055,1,train,34,reservoir,ideal,ideal,ideal,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,train,,,,,,
-ABCD,L1-0023,abcd_state_0028,1,train,35,biomass,ideal,bad_quality,ideal,ideal,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0052,abcd_state_0042,1,train,36,geosphere,low_resource,bad_quality,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",probe,probe,probe,,,,probe,probe,probe,,
-ABCD,L1-0061,abcd_state_0069,1,train,37,reservoir,ideal,low_resource,bad_quality,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0069,abcd_state_0056,1,train,38,reservoir,ideal,ideal,low_resource,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0048,abcd_state_0044,1,train,39,geosphere,bad_quality,low_resource,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0004,abcd_state_0012,1,train,40,atmosphere,bad_quality,ideal,ideal,bad_quality,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,train,,,,,,
-ABCD,L1-0066,abcd_state_0062,1,train,41,reservoir,ideal,bad_quality,low_resource,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0039,abcd_state_0053,1,train,42,geosphere,bad_quality,low_resource,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0022,abcd_state_0030,1,train,43,biomass,ideal,bad_quality,ideal,bad_quality,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0046,abcd_state_0045,1,train,44,geosphere,bad_quality,bad_quality,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",train,train,train,train,train,train,train,train,train,train,train
-ABCD,L1-0024,abcd_state_0029,1,train,45,biomass,ideal,bad_quality,ideal,low_resource,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,probe,,,,,,
-ABCD,L1-0060,abcd_state_0065,1,train,46,reservoir,ideal,ideal,low_resource,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0019,abcd_state_0036,1,train,47,biomass,bad_quality,bad_quality,ideal,bad_quality,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0043,abcd_state_0051,1,train,48,geosphere,low_resource,bad_quality,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,probe,,,,,,
-ABCD,L1-0057,abcd_state_0071,1,train,49,reservoir,ideal,bad_quality,low_resource,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",train,train,train,train,,train,train,train,train,train,train
-ABCD,L1-0026,abcd_state_0031,1,train,50,biomass,low_resource,bad_quality,ideal,ideal,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0014,abcd_state_0001,1,test,1,atmosphere,low_resource,ideal,ideal,ideal,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0003,abcd_state_0017,1,test,2,atmosphere,bad_quality,ideal,bad_quality,low_resource,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,probe,,,,,,
-ABCD,L1-0072,abcd_state_0059,1,test,3,reservoir,ideal,low_resource,low_resource,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,train,,,,,,
-ABCD,L1-0005,abcd_state_0010,1,test,4,atmosphere,bad_quality,ideal,ideal,ideal,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0015,abcd_state_0002,1,test,5,atmosphere,low_resource,ideal,ideal,low_resource,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0033,abcd_state_0020,1,test,6,biomass,ideal,low_resource,ideal,low_resource,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0037,abcd_state_0054,1,test,7,geosphere,bad_quality,bad_quality,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0056,abcd_state_0070,1,test,8,reservoir,ideal,bad_quality,ideal,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,train,,,,,,
-ABCD,L1-0011,abcd_state_0007,1,test,9,atmosphere,low_resource,ideal,bad_quality,ideal,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0036,abcd_state_0023,1,test,10,biomass,low_resource,low_resource,ideal,low_resource,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0058,abcd_state_0066,1,test,11,reservoir,ideal,ideal,bad_quality,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",train,train,train,train,,train,train,train,train,train,train
-ABCD,L1-0012,abcd_state_0008,1,test,12,atmosphere,low_resource,ideal,bad_quality,low_resource,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0020,abcd_state_0034,1,test,13,biomass,bad_quality,bad_quality,ideal,ideal,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0025,abcd_state_0033,1,test,14,biomass,low_resource,bad_quality,ideal,bad_quality,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0041,abcd_state_0046,1,test,15,geosphere,ideal,ideal,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0040,abcd_state_0048,1,test,16,geosphere,ideal,bad_quality,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0071,abcd_state_0058,1,test,17,reservoir,ideal,low_resource,ideal,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,
-ABCD,L1-0027,abcd_state_0032,1,test,18,biomass,low_resource,bad_quality,ideal,low_resource,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,
-ABCD,L1-0038,abcd_state_0052,1,test,19,geosphere,bad_quality,ideal,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,
-ABCD,L1-0013,abcd_state_0003,1,test,20,atmosphere,low_resource,ideal,ideal,bad_quality,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L1-0016,abcd_state_0006,1,test,21,atmosphere,low_resource,ideal,low_resource,bad_quality,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",train,train,train,train,,train,train,train,train,train,train
-ABCD,L1-0017,abcd_state_0004,1,test,22,atmosphere,low_resource,ideal,low_resource,ideal,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,train,,probe,probe,probe,,
-ABCD,L2-0035,abcd_state_0097,2,train,1,geosphere,ideal,ideal,low_resource,low_resource,L2_GEO_LL,"C[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,,,,,,,,
-ABCD,L2-0019,abcd_state_0090,2,train,2,biomass,bad_quality,low_resource,bad_quality,ideal,L2_BIO_LB,"C[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",probe,probe,probe,,probe,,probe,probe,,probe,probe
-ABCD,L2-0032,abcd_state_0100,2,train,3,geosphere,ideal,ideal,low_resource,bad_quality,L2_GEO_LB,"C[DRILL, R[TIME, FILTER, AIR], REFINE]",train,train,train,,,probe,train,train,train,train,train
-ABCD,L2-0029,abcd_state_0103,2,train,4,geosphere,ideal,ideal,bad_quality,low_resource,L2_GEO_BL,"R[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,,,probe,,,,,
-ABCD,L2-0011,abcd_state_0073,2,train,5,atmosphere,low_resource,low_resource,ideal,ideal,L2_ATM_LL,"C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,,train,,,,,
-ABCD,L2-0045,abcd_state_0113,2,train,6,reservoir,bad_quality,ideal,low_resource,low_resource,L2_RES_LB,"C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,,probe,,,,,
-ABCD,L2-0040,abcd_state_0117,2,train,7,reservoir,low_resource,ideal,bad_quality,bad_quality,L2_RES_BL,"R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,probe,probe,,,,,
-ABCD,L2-0026,abcd_state_0106,2,train,8,geosphere,ideal,ideal,bad_quality,bad_quality,L2_GEO_BB,"R[DRILL, R[TIME, FILTER, AIR], REFINE]",probe,probe,probe,,probe,,probe,probe,,probe,probe
-ABCD,L2-0020,abcd_state_0088,2,train,9,biomass,ideal,low_resource,bad_quality,ideal,L2_BIO_LB,"C[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,train,,,,,,,
-ABCD,L2-0007,abcd_state_0078,2,train,10,atmosphere,low_resource,bad_quality,ideal,bad_quality,L2_ATM_LB,"C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,,probe,probe
-ABCD,L2-0010,abcd_state_0075,2,train,11,atmosphere,low_resource,low_resource,ideal,bad_quality,L2_ATM_LL,"C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,,,,train,train,train,train,train
-ABCD,L2-0018,abcd_state_0092,2,train,12,biomass,low_resource,bad_quality,low_resource,ideal,L2_BIO_BL,"R[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",probe,probe,probe,train,,probe,probe,probe,,probe,probe
-ABCD,L2-0005,abcd_state_0079,2,train,13,atmosphere,bad_quality,low_resource,ideal,ideal,L2_ATM_BL,"R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L2-0031,abcd_state_0102,2,train,14,geosphere,ideal,bad_quality,low_resource,bad_quality,L2_GEO_LB,"C[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,,,,,,,,
-ABCD,L2-0006,abcd_state_0080,2,train,15,atmosphere,bad_quality,low_resource,ideal,low_resource,L2_ATM_BL,"R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,,,,train,train,train,train,train
-ABCD,L2-0042,abcd_state_0116,2,train,16,reservoir,low_resource,ideal,low_resource,bad_quality,L2_RES_BL,"R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,,,,,,,
-ABCD,L2-0033,abcd_state_0101,2,train,17,geosphere,ideal,low_resource,low_resource,bad_quality,L2_GEO_LB,"C[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,train,train,,,,,,
-ABCD,L2-0038,abcd_state_0118,2,train,18,reservoir,bad_quality,ideal,ideal,bad_quality,L2_RES_BB,"R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",train,train,train,,,,train,train,train,train,train
-ABCD,L2-0009,abcd_state_0077,2,train,19,atmosphere,low_resource,bad_quality,ideal,low_resource,L2_ATM_LB,"C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,
-ABCD,L2-0043,abcd_state_0114,2,train,20,reservoir,bad_quality,ideal,bad_quality,low_resource,L2_RES_LB,"C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,,,,,,,
-ABCD,L2-0025,abcd_state_0108,2,train,21,geosphere,ideal,bad_quality,bad_quality,bad_quality,L2_GEO_BB,"R[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,,,train,,,,,
-ABCD,L2-0044,abcd_state_0112,2,train,22,reservoir,bad_quality,ideal,ideal,low_resource,L2_RES_LB,"C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",train,train,train,,train,,train,train,train,train,train
-ABCD,L2-0024,abcd_state_0086,2,train,23,biomass,low_resource,low_resource,low_resource,ideal,L2_BIO_LL,"C[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,train,,train,,,,,
-ABCD,L2-0041,abcd_state_0115,2,train,24,reservoir,low_resource,ideal,ideal,bad_quality,L2_RES_BL,"R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,,,,probe,probe,,probe,probe
-ABCD,L2-0047,abcd_state_0109,2,train,25,reservoir,low_resource,ideal,ideal,low_resource,L2_RES_LL,"C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,,train,,,,,
-ABCD,L2-0017,abcd_state_0091,2,train,26,biomass,ideal,bad_quality,low_resource,ideal,L2_BIO_BL,"R[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,,probe,,,,,,
-ABCD,L2-0003,abcd_state_0083,2,train,27,atmosphere,bad_quality,bad_quality,ideal,low_resource,L2_ATM_BB,"R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,,probe,probe
-ABCD,L2-0002,abcd_state_0082,2,train,28,atmosphere,bad_quality,bad_quality,ideal,ideal,L2_ATM_BB,"R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,,train,,,,,
-ABCD,L2-0027,abcd_state_0107,2,train,29,geosphere,ideal,low_resource,bad_quality,bad_quality,L2_GEO_BB,"R[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,train,,,,,,,
-ABCD,L2-0048,abcd_state_0110,2,train,30,reservoir,low_resource,ideal,low_resource,low_resource,L2_RES_LL,"C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,train,,,,,,
-ABCD,L2-0023,abcd_state_0085,2,train,31,biomass,ideal,low_resource,low_resource,ideal,L2_BIO_LL,"C[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",train,train,train,,probe,,train,train,train,train,train
-ABCD,L2-0013,abcd_state_0096,2,train,32,biomass,bad_quality,bad_quality,bad_quality,ideal,L2_BIO_BB,"R[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",train,train,train,train,probe,,train,train,train,train,train
-ABCD,L2-0015,abcd_state_0095,2,train,33,biomass,low_resource,bad_quality,bad_quality,ideal,L2_BIO_BB,"R[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,,,train,,,,,
-ABCD,L2-0012,abcd_state_0074,2,train,34,atmosphere,low_resource,low_resource,ideal,low_resource,L2_ATM_LL,"C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,train,,,,,,
-ABCD,L2-0037,abcd_state_0120,2,test,1,reservoir,bad_quality,ideal,bad_quality,bad_quality,L2_RES_BB,"R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,probe,train,,,,,
-ABCD,L2-0036,abcd_state_0098,2,test,2,geosphere,ideal,low_resource,low_resource,low_resource,L2_GEO_LL,"C[DRILL, C[TIME, FILTER, AIR], REFINE]",probe,probe,probe,,train,train,probe,probe,,probe,probe
-ABCD,L2-0039,abcd_state_0119,2,test,3,reservoir,bad_quality,ideal,low_resource,bad_quality,L2_RES_BB,"R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,,,,,,,
-ABCD,L2-0014,abcd_state_0094,2,test,4,biomass,ideal,bad_quality,bad_quality,ideal,L2_BIO_BB,"R[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,,,,,,,,
-ABCD,L2-0016,abcd_state_0093,2,test,5,biomass,bad_quality,bad_quality,low_resource,ideal,L2_BIO_BL,"R[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,,,,,,,,
-ABCD,L2-0004,abcd_state_0081,2,test,6,atmosphere,bad_quality,low_resource,ideal,bad_quality,L2_ATM_BL,"R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,train,probe,,,,,
-ABCD,L2-0021,abcd_state_0089,2,test,7,biomass,low_resource,low_resource,bad_quality,ideal,L2_BIO_LB,"C[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,,,probe,,,,,
-ABCD,L2-0022,abcd_state_0087,2,test,8,biomass,bad_quality,low_resource,low_resource,ideal,L2_BIO_LL,"C[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,,,,,,,,
-ABCD,L2-0046,abcd_state_0111,2,test,9,reservoir,low_resource,ideal,bad_quality,low_resource,L2_RES_LL,"C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,,,,probe,probe,,probe,probe
-ABCD,L2-0001,abcd_state_0084,2,test,10,atmosphere,bad_quality,bad_quality,ideal,bad_quality,L2_ATM_BB,"R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,train,,,,,,
-ABCD,L2-0028,abcd_state_0105,2,test,11,geosphere,ideal,bad_quality,bad_quality,low_resource,L2_GEO_BL,"R[DRILL, C[TIME, FILTER, AIR], REFINE]",train,train,train,,,,train,train,train,train,train
-ABCD,L2-0030,abcd_state_0104,2,test,12,geosphere,ideal,low_resource,bad_quality,low_resource,L2_GEO_BL,"R[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,train,probe,,,,,,
-ABCD,L2-0008,abcd_state_0076,2,test,13,atmosphere,low_resource,bad_quality,ideal,ideal,L2_ATM_LB,"C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,train,probe,,,,,
-ABCD,L2-0034,abcd_state_0099,2,test,14,geosphere,ideal,bad_quality,low_resource,low_resource,L2_GEO_LL,"C[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,train,,,,,,,
-ABCD,L3-0017,abcd_state_0144,3,train,1,geosphere,bad_quality,ideal,bad_quality,bad_quality,L3_GEO_BBB,"R[DRILL, R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",train,train,train,probe,,train,train,train,train,train,train
-ABCD,L3-0008,abcd_state_0121,3,train,2,atmosphere,low_resource,low_resource,low_resource,ideal,L3_ATM_LLL,"C[C[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,,train,,,,probe,probe
-ABCD,L3-0029,abcd_state_0148,3,train,3,reservoir,bad_quality,bad_quality,ideal,low_resource,L3_RES_LBB,"C[TIME, FILTER, R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,probe,,probe,,,,train,train
-ABCD,L3-0021,abcd_state_0140,3,train,4,geosphere,bad_quality,ideal,low_resource,bad_quality,L3_GEO_LBB,"C[DRILL, R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,probe,,probe,,,,train,train
-ABCD,L3-0032,abcd_state_0145,3,train,5,reservoir,low_resource,low_resource,ideal,low_resource,L3_RES_LLL,"C[TIME, FILTER, C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,,,train,,,,train,train
-ABCD,L3-0007,abcd_state_0122,3,train,6,atmosphere,low_resource,low_resource,bad_quality,ideal,L3_ATM_LLB,"C[C[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,probe,,,,,,train,train
-ABCD,L3-0016,abcd_state_0129,3,train,7,biomass,ideal,low_resource,low_resource,low_resource,L3_BIO_LLL,"C[SOW, C[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",train,train,train,probe,,train,train,train,train,train,train
-ABCD,L3-0026,abcd_state_0151,3,train,8,reservoir,bad_quality,low_resource,ideal,bad_quality,L3_RES_BBL,"R[TIME, FILTER, R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",train,train,train,probe,,probe,train,train,train,train,train
-ABCD,L3-0001,abcd_state_0128,3,train,9,atmosphere,bad_quality,bad_quality,bad_quality,ideal,L3_ATM_BBB,"R[R[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,probe,probe,train,,,,train,train
-ABCD,L3-0004,abcd_state_0125,3,train,10,atmosphere,bad_quality,low_resource,low_resource,ideal,L3_ATM_BLL,"R[C[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,,probe,probe
-ABCD,L3-0025,abcd_state_0152,3,train,11,reservoir,bad_quality,bad_quality,ideal,bad_quality,L3_RES_BBB,"R[TIME, FILTER, R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,probe,train,train,,,,probe,probe
-ABCD,L3-0024,abcd_state_0137,3,train,12,geosphere,low_resource,ideal,low_resource,low_resource,L3_GEO_LLL,"C[DRILL, C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,probe,train,train,,,,probe,probe
-ABCD,L3-0022,abcd_state_0139,3,train,13,geosphere,low_resource,ideal,low_resource,bad_quality,L3_GEO_LBL,"C[DRILL, R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",probe,probe,probe,probe,,probe,probe,probe,,probe,probe
-ABCD,L3-0020,abcd_state_0141,3,train,14,geosphere,low_resource,ideal,bad_quality,low_resource,L3_GEO_BLL,"R[DRILL, C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,,probe,,,,,probe,probe
-ABCD,L3-0028,abcd_state_0149,3,train,15,reservoir,low_resource,low_resource,ideal,bad_quality,L3_RES_BLL,"R[TIME, FILTER, C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",train,train,train,probe,,,train,train,train,train,train
-ABCD,L3-0023,abcd_state_0138,3,train,16,geosphere,bad_quality,ideal,low_resource,low_resource,L3_GEO_LLB,"C[DRILL, C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",probe,probe,probe,,train,,probe,probe,,probe,probe
-ABCD,L3-0030,abcd_state_0147,3,train,17,reservoir,bad_quality,low_resource,ideal,low_resource,L3_RES_LBL,"C[TIME, FILTER, R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,,train,probe,probe,probe,,probe,probe
-ABCD,L3-0015,abcd_state_0130,3,train,18,biomass,ideal,low_resource,low_resource,bad_quality,L3_BIO_LLB,"C[SOW, C[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,,probe,,,,,train,train
-ABCD,L3-0006,abcd_state_0123,3,train,19,atmosphere,low_resource,bad_quality,low_resource,ideal,L3_ATM_LBL,"C[R[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,probe,train,probe,train,train,train,train,train
-ABCD,L3-0011,abcd_state_0134,3,train,20,biomass,ideal,bad_quality,low_resource,bad_quality,L3_BIO_BLB,"R[SOW, C[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",train,train,train,probe,probe,probe,train,train,train,train,train
-ABCD,L3-0012,abcd_state_0133,3,train,21,biomass,ideal,bad_quality,low_resource,low_resource,L3_BIO_BLL,"R[SOW, C[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,probe,,,,,,train,train
-ABCD,L3-0013,abcd_state_0132,3,train,22,biomass,ideal,low_resource,bad_quality,bad_quality,L3_BIO_LBB,"C[SOW, R[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",probe,probe,probe,probe,probe,probe,probe,probe,,probe,probe
-ABCD,L3-0002,abcd_state_0127,3,test,1,atmosphere,bad_quality,bad_quality,low_resource,ideal,L3_ATM_BBL,"R[R[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,probe,train,probe,probe,probe,,probe,probe
-ABCD,L3-0009,abcd_state_0136,3,test,2,biomass,ideal,bad_quality,bad_quality,bad_quality,L3_BIO_BBB,"R[SOW, R[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,probe,probe,train,,,,probe,probe
-ABCD,L3-0003,abcd_state_0126,3,test,3,atmosphere,bad_quality,low_resource,bad_quality,ideal,L3_ATM_BLB,"R[C[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,probe,probe,probe,train,train,train,train,train
-ABCD,L3-0005,abcd_state_0124,3,test,4,atmosphere,low_resource,bad_quality,bad_quality,ideal,L3_ATM_LBB,"C[R[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,probe,,probe,,,,probe,probe
-ABCD,L3-0014,abcd_state_0131,3,test,5,biomass,ideal,low_resource,bad_quality,low_resource,L3_BIO_LBL,"C[SOW, R[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,probe,,probe,,,,probe,probe
-ABCD,L3-0019,abcd_state_0142,3,test,6,geosphere,bad_quality,ideal,bad_quality,low_resource,L3_GEO_BLB,"R[DRILL, C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,probe,probe,probe,,,,train,train
-ABCD,L3-0027,abcd_state_0150,3,test,7,reservoir,low_resource,bad_quality,ideal,bad_quality,L3_RES_BLB,"R[TIME, FILTER, C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,probe,train,probe,probe,probe,,probe,probe
-ABCD,L3-0031,abcd_state_0146,3,test,8,reservoir,low_resource,bad_quality,ideal,low_resource,L3_RES_LLB,"C[TIME, FILTER, C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,probe,train,,,,,probe,probe
-ABCD,L3-0018,abcd_state_0143,3,test,9,geosphere,low_resource,ideal,bad_quality,bad_quality,L3_GEO_BBL,"R[DRILL, R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",train,train,train,probe,,probe,train,train,train,train,train
-ABCD,L3-0010,abcd_state_0135,3,test,10,biomass,ideal,bad_quality,bad_quality,low_resource,L3_BIO_BBL,"R[SOW, R[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",probe,probe,probe,,probe,probe,probe,probe,,probe,probe
+task_id,mission_id,source_mission_id,goal_level,mission_split,split_index,target_zone,atmosphere_condition,biomass_condition,geosphere_condition,reservoir_condition,template_id,gold_action_sequence,t1_split,t2_split,t3_split,t4_split,t5_split,t6_split,t7_split,t8_split,t9_split,t10_split,t11_split,t1_order,t2_order,t3_order,t4_order,t5_order,t6_order,t7_order,t8_order,t9_order,t10_order,t11_order
+ABCD,L1-0045,abcd_state_0050,1,train,1,geosphere,low_resource,low_resource,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",probe,probe,probe,,,,probe,probe,probe,,,20,20,20,,,,20,20,3,,
+ABCD,L1-0021,abcd_state_0035,1,train,2,biomass,bad_quality,bad_quality,ideal,low_resource,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",probe,probe,probe,,,,probe,probe,probe,,,16,16,16,,,,16,16,7,,
+ABCD,L1-0029,abcd_state_0025,1,train,3,biomass,bad_quality,low_resource,ideal,ideal,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0044,abcd_state_0049,1,train,4,geosphere,low_resource,ideal,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0032,abcd_state_0019,1,train,5,biomass,ideal,low_resource,ideal,ideal,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0028,abcd_state_0027,1,train,6,biomass,bad_quality,low_resource,ideal,bad_quality,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0031,abcd_state_0021,1,train,7,biomass,ideal,low_resource,ideal,bad_quality,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",train,train,train,train,,train,train,train,train,train,train,7,7,7,13,,0,7,7,7,28,28
+ABCD,L1-0001,abcd_state_0018,1,train,8,atmosphere,bad_quality,ideal,bad_quality,bad_quality,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0010,abcd_state_0009,1,train,9,atmosphere,low_resource,ideal,bad_quality,bad_quality,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,probe,,,,,,,,,,,23,,,,21,,
+ABCD,L1-0042,abcd_state_0047,1,train,10,geosphere,ideal,low_resource,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0070,abcd_state_0060,1,train,11,reservoir,ideal,low_resource,bad_quality,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0051,abcd_state_0038,1,train,12,geosphere,ideal,low_resource,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,train,,,,,,,,,,,21,,,,,,
+ABCD,L1-0049,abcd_state_0039,1,train,13,geosphere,ideal,bad_quality,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",train,train,train,train,,train,train,train,train,train,train,3,3,3,6,,4,3,3,3,12,12
+ABCD,L1-0053,abcd_state_0040,1,train,14,geosphere,low_resource,ideal,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0064,abcd_state_0063,1,train,15,reservoir,ideal,bad_quality,bad_quality,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,probe,,,,,,,,,,,17,,,,,,
+ABCD,L1-0006,abcd_state_0011,1,train,16,atmosphere,bad_quality,ideal,ideal,low_resource,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,28,,
+ABCD,L1-0047,abcd_state_0043,1,train,17,geosphere,bad_quality,ideal,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0009,abcd_state_0014,1,train,18,atmosphere,bad_quality,ideal,low_resource,low_resource,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,13,,
+ABCD,L1-0054,abcd_state_0041,1,train,19,geosphere,low_resource,low_resource,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0050,abcd_state_0037,1,train,20,geosphere,ideal,ideal,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0007,abcd_state_0015,1,train,21,atmosphere,bad_quality,ideal,low_resource,bad_quality,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",train,train,train,train,,train,train,train,train,train,train,18,18,18,5,,14,18,18,3,17,17
+ABCD,L1-0002,abcd_state_0016,1,train,22,atmosphere,bad_quality,ideal,bad_quality,ideal,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0065,abcd_state_0061,1,train,23,reservoir,ideal,bad_quality,ideal,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",probe,probe,probe,,,,probe,probe,probe,,,5,5,5,,,,5,5,4,,
+ABCD,L1-0055,abcd_state_0072,1,train,24,reservoir,ideal,bad_quality,bad_quality,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",probe,probe,probe,,probe,,probe,probe,probe,,,8,8,8,,0,,8,8,6,,
+ABCD,L1-0034,abcd_state_0024,1,train,25,biomass,low_resource,low_resource,ideal,bad_quality,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",probe,probe,probe,,probe,,probe,probe,probe,,,14,14,14,,6,,14,14,5,,
+ABCD,L1-0067,abcd_state_0057,1,train,26,reservoir,ideal,ideal,bad_quality,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0062,abcd_state_0067,1,train,27,reservoir,ideal,low_resource,ideal,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,train,,,,,,,,,,,8,,,,,,
+ABCD,L1-0030,abcd_state_0026,1,train,28,biomass,bad_quality,low_resource,ideal,low_resource,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",train,train,train,train,,train,train,train,train,train,train,22,22,22,9,,16,22,22,22,11,11
+ABCD,L1-0059,abcd_state_0064,1,train,29,reservoir,ideal,ideal,ideal,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0018,abcd_state_0005,1,train,30,atmosphere,low_resource,ideal,low_resource,low_resource,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0035,abcd_state_0022,1,train,31,biomass,low_resource,low_resource,ideal,ideal,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0063,abcd_state_0068,1,train,32,reservoir,ideal,low_resource,low_resource,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0008,abcd_state_0013,1,train,33,atmosphere,bad_quality,ideal,low_resource,ideal,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,probe,,,0,0,0,,,,0,0,5,,
+ABCD,L1-0068,abcd_state_0055,1,train,34,reservoir,ideal,ideal,ideal,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,train,,,,,,,,,,,5,,,,,,
+ABCD,L1-0023,abcd_state_0028,1,train,35,biomass,ideal,bad_quality,ideal,ideal,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0052,abcd_state_0042,1,train,36,geosphere,low_resource,bad_quality,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",probe,probe,probe,,,,probe,probe,probe,,,23,23,23,,,,23,23,0,,
+ABCD,L1-0061,abcd_state_0069,1,train,37,reservoir,ideal,low_resource,bad_quality,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0069,abcd_state_0056,1,train,38,reservoir,ideal,ideal,low_resource,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0048,abcd_state_0044,1,train,39,geosphere,bad_quality,low_resource,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0004,abcd_state_0012,1,train,40,atmosphere,bad_quality,ideal,ideal,bad_quality,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,train,,,,,,,,,,,12,,,,27,,
+ABCD,L1-0066,abcd_state_0062,1,train,41,reservoir,ideal,bad_quality,low_resource,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0039,abcd_state_0053,1,train,42,geosphere,bad_quality,low_resource,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0022,abcd_state_0030,1,train,43,biomass,ideal,bad_quality,ideal,bad_quality,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0046,abcd_state_0045,1,train,44,geosphere,bad_quality,bad_quality,low_resource,ideal,L1_GEO_L,"C[DRILL, WATER, REFINE]",train,train,train,train,train,train,train,train,train,train,train,11,11,11,18,1,10,11,11,11,27,27
+ABCD,L1-0024,abcd_state_0029,1,train,45,biomass,ideal,bad_quality,ideal,low_resource,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,probe,,,,,,,,,,,12,,,,,,
+ABCD,L1-0060,abcd_state_0065,1,train,46,reservoir,ideal,ideal,low_resource,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0019,abcd_state_0036,1,train,47,biomass,bad_quality,bad_quality,ideal,bad_quality,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0043,abcd_state_0051,1,train,48,geosphere,low_resource,bad_quality,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,probe,,,,,,,,,,,16,,,,,,
+ABCD,L1-0057,abcd_state_0071,1,train,49,reservoir,ideal,bad_quality,low_resource,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",train,train,train,train,,train,train,train,train,train,train,0,0,0,23,,20,0,0,0,6,6
+ABCD,L1-0026,abcd_state_0031,1,train,50,biomass,low_resource,bad_quality,ideal,ideal,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0014,abcd_state_0001,1,test,1,atmosphere,low_resource,ideal,ideal,ideal,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0003,abcd_state_0017,1,test,2,atmosphere,bad_quality,ideal,bad_quality,low_resource,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,probe,,,,,,,,,,,4,,,,8,,
+ABCD,L1-0072,abcd_state_0059,1,test,3,reservoir,ideal,low_resource,low_resource,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,train,,,,,,,,,,,10,,,,,,
+ABCD,L1-0005,abcd_state_0010,1,test,4,atmosphere,bad_quality,ideal,ideal,ideal,L1_ATM_B,"R[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,18,,
+ABCD,L1-0015,abcd_state_0002,1,test,5,atmosphere,low_resource,ideal,ideal,low_resource,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0033,abcd_state_0020,1,test,6,biomass,ideal,low_resource,ideal,low_resource,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0037,abcd_state_0054,1,test,7,geosphere,bad_quality,bad_quality,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0056,abcd_state_0070,1,test,8,reservoir,ideal,bad_quality,ideal,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",,,,,train,,,,,,,,,,,19,,,,,,
+ABCD,L1-0011,abcd_state_0007,1,test,9,atmosphere,low_resource,ideal,bad_quality,ideal,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0036,abcd_state_0023,1,test,10,biomass,low_resource,low_resource,ideal,low_resource,L1_BIO_L,"C[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0058,abcd_state_0066,1,test,11,reservoir,ideal,ideal,bad_quality,bad_quality,L1_RES_B,"R[TIME, FILTER, AIR]",train,train,train,train,,train,train,train,train,train,train,13,13,13,0,,22,13,13,13,3,3
+ABCD,L1-0012,abcd_state_0008,1,test,12,atmosphere,low_resource,ideal,bad_quality,low_resource,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0020,abcd_state_0034,1,test,13,biomass,bad_quality,bad_quality,ideal,ideal,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0025,abcd_state_0033,1,test,14,biomass,low_resource,bad_quality,ideal,bad_quality,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0041,abcd_state_0046,1,test,15,geosphere,ideal,ideal,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0040,abcd_state_0048,1,test,16,geosphere,ideal,bad_quality,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0071,abcd_state_0058,1,test,17,reservoir,ideal,low_resource,ideal,low_resource,L1_RES_L,"C[TIME, FILTER, AIR]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0027,abcd_state_0032,1,test,18,biomass,low_resource,bad_quality,ideal,low_resource,L1_BIO_B,"R[SOW, MINERAL, FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0038,abcd_state_0052,1,test,19,geosphere,bad_quality,ideal,bad_quality,ideal,L1_GEO_B,"R[DRILL, WATER, REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0013,abcd_state_0003,1,test,20,atmosphere,low_resource,ideal,ideal,bad_quality,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L1-0016,abcd_state_0006,1,test,21,atmosphere,low_resource,ideal,low_resource,bad_quality,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",train,train,train,train,,train,train,train,train,train,train,17,17,17,17,,6,17,17,17,20,20
+ABCD,L1-0017,abcd_state_0004,1,test,22,atmosphere,low_resource,ideal,low_resource,ideal,L1_ATM_L,"C[PLANT, LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,train,,probe,probe,probe,,,11,11,11,,16,,11,11,1,,
+ABCD,L2-0035,abcd_state_0097,2,train,1,geosphere,ideal,ideal,low_resource,low_resource,L2_GEO_LL,"C[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L2-0019,abcd_state_0090,2,train,2,biomass,bad_quality,low_resource,bad_quality,ideal,L2_BIO_LB,"C[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",probe,probe,probe,,probe,,probe,probe,,probe,probe,9,9,9,,5,,9,9,,0,0
+ABCD,L2-0032,abcd_state_0100,2,train,3,geosphere,ideal,ideal,low_resource,bad_quality,L2_GEO_LB,"C[DRILL, R[TIME, FILTER, AIR], REFINE]",train,train,train,,,probe,train,train,train,train,train,2,2,2,,,16,2,2,2,5,5
+ABCD,L2-0029,abcd_state_0103,2,train,4,geosphere,ideal,ideal,bad_quality,low_resource,L2_GEO_BL,"R[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,,,probe,,,,,,,,,,,21,,,,,
+ABCD,L2-0011,abcd_state_0073,2,train,5,atmosphere,low_resource,low_resource,ideal,ideal,L2_ATM_LL,"C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,,train,,,,,,,,,14,,2,,,,,
+ABCD,L2-0045,abcd_state_0113,2,train,6,reservoir,bad_quality,ideal,low_resource,low_resource,L2_RES_LB,"C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,,probe,,,,,,,,,,,18,,,,,
+ABCD,L2-0040,abcd_state_0117,2,train,7,reservoir,low_resource,ideal,bad_quality,bad_quality,L2_RES_BL,"R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,probe,probe,,,,,,,,,,9,8,,,,,
+ABCD,L2-0026,abcd_state_0106,2,train,8,geosphere,ideal,ideal,bad_quality,bad_quality,L2_GEO_BB,"R[DRILL, R[TIME, FILTER, AIR], REFINE]",probe,probe,probe,,probe,,probe,probe,,probe,probe,19,19,19,,14,,19,19,,10,10
+ABCD,L2-0020,abcd_state_0088,2,train,9,biomass,ideal,low_resource,bad_quality,ideal,L2_BIO_LB,"C[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,train,,,,,,,,,,,7,,,,,,,
+ABCD,L2-0007,abcd_state_0078,2,train,10,atmosphere,low_resource,bad_quality,ideal,bad_quality,L2_ATM_LB,"C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,,probe,probe,1,1,1,,,,1,1,,4,4
+ABCD,L2-0010,abcd_state_0075,2,train,11,atmosphere,low_resource,low_resource,ideal,bad_quality,L2_ATM_LL,"C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,,,,train,train,train,train,train,9,9,9,,,,9,9,1,18,18
+ABCD,L2-0018,abcd_state_0092,2,train,12,biomass,low_resource,bad_quality,low_resource,ideal,L2_BIO_BL,"R[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",probe,probe,probe,train,,probe,probe,probe,,probe,probe,17,17,17,2,,4,17,17,,22,22
+ABCD,L2-0005,abcd_state_0079,2,train,13,atmosphere,bad_quality,low_resource,ideal,ideal,L2_ATM_BL,"R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L2-0031,abcd_state_0102,2,train,14,geosphere,ideal,bad_quality,low_resource,bad_quality,L2_GEO_LB,"C[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L2-0006,abcd_state_0080,2,train,15,atmosphere,bad_quality,low_resource,ideal,low_resource,L2_ATM_BL,"R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,,,,train,train,train,train,train,6,6,6,,,,6,6,22,24,24
+ABCD,L2-0042,abcd_state_0116,2,train,16,reservoir,low_resource,ideal,low_resource,bad_quality,L2_RES_BL,"R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,,,,,,,,,,,8,,,,,,,
+ABCD,L2-0033,abcd_state_0101,2,train,17,geosphere,ideal,low_resource,low_resource,bad_quality,L2_GEO_LB,"C[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,train,train,,,,,,,,,,21,9,,,,,,
+ABCD,L2-0038,abcd_state_0118,2,train,18,reservoir,bad_quality,ideal,ideal,bad_quality,L2_RES_BB,"R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",train,train,train,,,,train,train,train,train,train,15,15,15,,,,15,15,15,15,15
+ABCD,L2-0009,abcd_state_0077,2,train,19,atmosphere,low_resource,bad_quality,ideal,low_resource,L2_ATM_LB,"C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L2-0043,abcd_state_0114,2,train,20,reservoir,bad_quality,ideal,bad_quality,low_resource,L2_RES_LB,"C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,,,,,,,,,,,19,,,,,,,
+ABCD,L2-0025,abcd_state_0108,2,train,21,geosphere,ideal,bad_quality,bad_quality,bad_quality,L2_GEO_BB,"R[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,,,train,,,,,,,,,,,15,,,,,
+ABCD,L2-0044,abcd_state_0112,2,train,22,reservoir,bad_quality,ideal,ideal,low_resource,L2_RES_LB,"C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",train,train,train,,train,,train,train,train,train,train,20,20,20,,4,,20,20,20,31,31
+ABCD,L2-0024,abcd_state_0086,2,train,23,biomass,low_resource,low_resource,low_resource,ideal,L2_BIO_LL,"C[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,train,,train,,,,,,,,,22,,9,,,,,
+ABCD,L2-0041,abcd_state_0115,2,train,24,reservoir,low_resource,ideal,ideal,bad_quality,L2_RES_BL,"R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,,,,probe,probe,,probe,probe,3,3,3,,,,3,3,,14,14
+ABCD,L2-0047,abcd_state_0109,2,train,25,reservoir,low_resource,ideal,ideal,low_resource,L2_RES_LL,"C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,,train,,,,,,,,,12,,12,,,,,
+ABCD,L2-0017,abcd_state_0091,2,train,26,biomass,ideal,bad_quality,low_resource,ideal,L2_BIO_BL,"R[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,,probe,,,,,,,,,,,19,,,,,,
+ABCD,L2-0003,abcd_state_0083,2,train,27,atmosphere,bad_quality,bad_quality,ideal,low_resource,L2_ATM_BB,"R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,,probe,probe,22,22,22,,,,22,22,12,15,15
+ABCD,L2-0002,abcd_state_0082,2,train,28,atmosphere,bad_quality,bad_quality,ideal,ideal,L2_ATM_BB,"R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,,train,,,,,,,,,10,,19,,,25,,
+ABCD,L2-0027,abcd_state_0107,2,train,29,geosphere,ideal,low_resource,bad_quality,bad_quality,L2_GEO_BB,"R[DRILL, R[TIME, FILTER, AIR], REFINE]",,,,train,,,,,,,,,,,11,,,,,,,
+ABCD,L2-0048,abcd_state_0110,2,train,30,reservoir,low_resource,ideal,low_resource,low_resource,L2_RES_LL,"C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,train,,,,,,,,,,,13,,,,,,
+ABCD,L2-0023,abcd_state_0085,2,train,31,biomass,ideal,low_resource,low_resource,ideal,L2_BIO_LL,"C[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",train,train,train,,probe,,train,train,train,train,train,21,21,21,,18,,21,21,21,2,2
+ABCD,L2-0013,abcd_state_0096,2,train,32,biomass,bad_quality,bad_quality,bad_quality,ideal,L2_BIO_BB,"R[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",train,train,train,train,probe,,train,train,train,train,train,14,14,14,20,13,,14,14,30,22,22
+ABCD,L2-0015,abcd_state_0095,2,train,33,biomass,low_resource,bad_quality,bad_quality,ideal,L2_BIO_BB,"R[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,,,train,,,,,,,,,,,21,,,11,,
+ABCD,L2-0012,abcd_state_0074,2,train,34,atmosphere,low_resource,low_resource,ideal,low_resource,L2_ATM_LL,"C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,train,,,,,,,,,,,22,,,,,,
+ABCD,L2-0037,abcd_state_0120,2,test,1,reservoir,bad_quality,ideal,bad_quality,bad_quality,L2_RES_BB,"R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,train,probe,train,,,,,,,,,16,7,8,,,,,
+ABCD,L2-0036,abcd_state_0098,2,test,2,geosphere,ideal,low_resource,low_resource,low_resource,L2_GEO_LL,"C[DRILL, C[TIME, FILTER, AIR], REFINE]",probe,probe,probe,,train,train,probe,probe,,probe,probe,12,12,12,,2,3,12,12,,18,18
+ABCD,L2-0039,abcd_state_0119,2,test,3,reservoir,bad_quality,ideal,low_resource,bad_quality,L2_RES_BB,"R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L2-0014,abcd_state_0094,2,test,4,biomass,ideal,bad_quality,bad_quality,ideal,L2_BIO_BB,"R[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L2-0016,abcd_state_0093,2,test,5,biomass,bad_quality,bad_quality,low_resource,ideal,L2_BIO_BL,"R[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,,,,,,,,,,,,,,,,,6,,
+ABCD,L2-0004,abcd_state_0081,2,test,6,atmosphere,bad_quality,low_resource,ideal,bad_quality,L2_ATM_BL,"R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,train,probe,,,,,,,,,1,17,12,,,,,
+ABCD,L2-0021,abcd_state_0089,2,test,7,biomass,low_resource,low_resource,bad_quality,ideal,L2_BIO_LB,"C[SOW, R[DRILL, WATER, REFINE], FERTILIZE]",,,,,,probe,,,,,,,,,,,0,,,,,
+ABCD,L2-0022,abcd_state_0087,2,test,8,biomass,bad_quality,low_resource,low_resource,ideal,L2_BIO_LL,"C[SOW, C[DRILL, WATER, REFINE], FERTILIZE]",,,,,,,,,,,,,,,,,,,,,,
+ABCD,L2-0046,abcd_state_0111,2,test,9,reservoir,low_resource,ideal,bad_quality,low_resource,L2_RES_LL,"C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,,,,probe,probe,,probe,probe,7,7,7,,,,7,7,,8,8
+ABCD,L2-0001,abcd_state_0084,2,test,10,atmosphere,bad_quality,bad_quality,ideal,bad_quality,L2_ATM_BB,"R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,train,,,,,,,,,,,7,,,,17,,
+ABCD,L2-0028,abcd_state_0105,2,test,11,geosphere,ideal,bad_quality,bad_quality,low_resource,L2_GEO_BL,"R[DRILL, C[TIME, FILTER, AIR], REFINE]",train,train,train,,,,train,train,train,train,train,5,5,5,,,,5,5,5,8,8
+ABCD,L2-0030,abcd_state_0104,2,test,12,geosphere,ideal,low_resource,bad_quality,low_resource,L2_GEO_BL,"R[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,train,probe,,,,,,,,,,3,10,,,,,,
+ABCD,L2-0008,abcd_state_0076,2,test,13,atmosphere,low_resource,bad_quality,ideal,ideal,L2_ATM_LB,"C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,train,train,probe,,,,,,,,,15,20,11,,,,,
+ABCD,L2-0034,abcd_state_0099,2,test,14,geosphere,ideal,bad_quality,low_resource,low_resource,L2_GEO_LL,"C[DRILL, C[TIME, FILTER, AIR], REFINE]",,,,train,,,,,,,,,,,4,,,,,,,
+ABCD,L3-0017,abcd_state_0144,3,train,1,geosphere,bad_quality,ideal,bad_quality,bad_quality,L3_GEO_BBB,"R[DRILL, R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",train,train,train,probe,,train,train,train,train,train,train,1,1,1,13,,1,1,1,1,26,26
+ABCD,L3-0008,abcd_state_0121,3,train,2,atmosphere,low_resource,low_resource,low_resource,ideal,L3_ATM_LLL,"C[C[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,,,train,,,,probe,probe,,,,,,13,,,,17,17
+ABCD,L3-0029,abcd_state_0148,3,train,3,reservoir,bad_quality,bad_quality,ideal,low_resource,L3_RES_LBB,"C[TIME, FILTER, R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,probe,,probe,,,,train,train,,,,10,,6,,,,25,25
+ABCD,L3-0021,abcd_state_0140,3,train,4,geosphere,bad_quality,ideal,low_resource,bad_quality,L3_GEO_LBB,"C[DRILL, R[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,probe,,probe,,,,train,train,,,,5,,17,,,,19,19
+ABCD,L3-0032,abcd_state_0145,3,train,5,reservoir,low_resource,low_resource,ideal,low_resource,L3_RES_LLL,"C[TIME, FILTER, C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,,,train,,,,train,train,,,,,,7,,,,23,23
+ABCD,L3-0007,abcd_state_0122,3,train,6,atmosphere,low_resource,low_resource,bad_quality,ideal,L3_ATM_LLB,"C[C[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,probe,,,,,,train,train,,,,20,,,,,,4,4
+ABCD,L3-0016,abcd_state_0129,3,train,7,biomass,ideal,low_resource,low_resource,low_resource,L3_BIO_LLL,"C[SOW, C[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",train,train,train,probe,,train,train,train,train,train,train,8,8,8,9,,5,8,8,8,21,21
+ABCD,L3-0026,abcd_state_0151,3,train,8,reservoir,bad_quality,low_resource,ideal,bad_quality,L3_RES_BBL,"R[TIME, FILTER, R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",train,train,train,probe,,probe,train,train,train,train,train,23,23,23,15,,23,23,23,23,7,7
+ABCD,L3-0001,abcd_state_0128,3,train,9,atmosphere,bad_quality,bad_quality,bad_quality,ideal,L3_ATM_BBB,"R[R[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,probe,probe,train,,,,train,train,,,,11,3,18,,,,9,9
+ABCD,L3-0004,abcd_state_0125,3,train,10,atmosphere,bad_quality,low_resource,low_resource,ideal,L3_ATM_BLL,"R[C[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,,,,probe,probe,,probe,probe,4,4,4,,,,4,4,23,3,3
+ABCD,L3-0025,abcd_state_0152,3,train,11,reservoir,bad_quality,bad_quality,ideal,bad_quality,L3_RES_BBB,"R[TIME, FILTER, R[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,probe,train,train,,,,probe,probe,,,,14,14,23,,,,2,2
+ABCD,L3-0024,abcd_state_0137,3,train,12,geosphere,low_resource,ideal,low_resource,low_resource,L3_GEO_LLL,"C[DRILL, C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,probe,train,train,,,,probe,probe,,,,3,6,11,,,2,9,9
+ABCD,L3-0022,abcd_state_0139,3,train,13,geosphere,low_resource,ideal,low_resource,bad_quality,L3_GEO_LBL,"C[DRILL, R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",probe,probe,probe,probe,,probe,probe,probe,,probe,probe,6,6,6,6,,10,6,6,,7,7
+ABCD,L3-0020,abcd_state_0141,3,train,14,geosphere,low_resource,ideal,bad_quality,low_resource,L3_GEO_BLL,"R[DRILL, C[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,,probe,,,,,probe,probe,,,,,15,,,,,12,12
+ABCD,L3-0028,abcd_state_0149,3,train,15,reservoir,low_resource,low_resource,ideal,bad_quality,L3_RES_BLL,"R[TIME, FILTER, C[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",train,train,train,probe,,,train,train,train,train,train,12,12,12,21,,,12,12,12,1,1
+ABCD,L3-0023,abcd_state_0138,3,train,16,geosphere,bad_quality,ideal,low_resource,low_resource,L3_GEO_LLB,"C[DRILL, C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",probe,probe,probe,,train,,probe,probe,,probe,probe,18,18,18,,23,,18,18,,23,23
+ABCD,L3-0030,abcd_state_0147,3,train,17,reservoir,bad_quality,low_resource,ideal,low_resource,L3_RES_LBL,"C[TIME, FILTER, R[C[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,,train,probe,probe,probe,,probe,probe,2,2,2,,3,22,2,2,,5,5
+ABCD,L3-0015,abcd_state_0130,3,train,18,biomass,ideal,low_resource,low_resource,bad_quality,L3_BIO_LLB,"C[SOW, C[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,,probe,,,,,train,train,,,,,2,,,,9,10,10
+ABCD,L3-0006,abcd_state_0123,3,train,19,atmosphere,low_resource,bad_quality,low_resource,ideal,L3_ATM_LBL,"C[R[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,probe,train,probe,train,train,train,train,train,10,10,10,17,0,14,10,10,15,0,0
+ABCD,L3-0011,abcd_state_0134,3,train,20,biomass,ideal,bad_quality,low_resource,bad_quality,L3_BIO_BLB,"R[SOW, C[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",train,train,train,probe,probe,probe,train,train,train,train,train,4,4,4,19,11,19,4,4,31,13,13
+ABCD,L3-0012,abcd_state_0133,3,train,21,biomass,ideal,bad_quality,low_resource,low_resource,L3_BIO_BLL,"R[SOW, C[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,probe,,,,,,train,train,,,,16,,,,,,14,14
+ABCD,L3-0013,abcd_state_0132,3,train,22,biomass,ideal,low_resource,bad_quality,bad_quality,L3_BIO_LBB,"C[SOW, R[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",probe,probe,probe,probe,probe,probe,probe,probe,,probe,probe,13,13,13,22,20,7,13,13,,1,1
+ABCD,L3-0002,abcd_state_0127,3,test,1,atmosphere,bad_quality,bad_quality,low_resource,ideal,L3_ATM_BBL,"R[R[SOW, C[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",probe,probe,probe,probe,train,probe,probe,probe,,probe,probe,21,21,21,12,15,13,21,21,,21,21
+ABCD,L3-0009,abcd_state_0136,3,test,2,biomass,ideal,bad_quality,bad_quality,bad_quality,L3_BIO_BBB,"R[SOW, R[DRILL, R[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,probe,probe,train,,,,probe,probe,,,,23,22,17,,,16,20,20
+ABCD,L3-0003,abcd_state_0126,3,test,3,atmosphere,bad_quality,low_resource,bad_quality,ideal,L3_ATM_BLB,"R[C[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",train,train,train,probe,probe,probe,train,train,train,train,train,19,19,19,0,1,5,19,19,19,16,16
+ABCD,L3-0005,abcd_state_0124,3,test,4,atmosphere,low_resource,bad_quality,bad_quality,ideal,L3_ATM_LBB,"C[R[SOW, R[DRILL, WATER, REFINE], FERTILIZE], LIGHT, PHOTOSYNTHESIS]",,,,probe,,probe,,,,probe,probe,,,,7,,20,,,,6,6
+ABCD,L3-0014,abcd_state_0131,3,test,5,biomass,ideal,low_resource,bad_quality,low_resource,L3_BIO_LBL,"C[SOW, R[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",,,,probe,,probe,,,,probe,probe,,,,2,,1,,,,19,19
+ABCD,L3-0019,abcd_state_0142,3,test,6,geosphere,bad_quality,ideal,bad_quality,low_resource,L3_GEO_BLB,"R[DRILL, C[TIME, FILTER, R[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",,,,probe,probe,probe,,,,train,train,,,,8,21,9,,,,30,30
+ABCD,L3-0027,abcd_state_0150,3,test,7,reservoir,low_resource,bad_quality,ideal,bad_quality,L3_RES_BLB,"R[TIME, FILTER, C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",probe,probe,probe,probe,train,probe,probe,probe,,probe,probe,10,10,10,18,11,15,10,10,7,11,11
+ABCD,L3-0031,abcd_state_0146,3,test,8,reservoir,low_resource,bad_quality,ideal,low_resource,L3_RES_LLB,"C[TIME, FILTER, C[R[SOW, MINERAL, FERTILIZE], LIGHT, PHOTOSYNTHESIS]]",,,,probe,train,,,,,probe,probe,,,,4,18,,,,,13,13
+ABCD,L3-0018,abcd_state_0143,3,test,9,geosphere,low_resource,ideal,bad_quality,bad_quality,L3_GEO_BBL,"R[DRILL, R[TIME, FILTER, C[PLANT, LIGHT, PHOTOSYNTHESIS]], REFINE]",train,train,train,probe,,probe,train,train,train,train,train,16,16,16,1,,3,16,16,16,29,29
+ABCD,L3-0010,abcd_state_0135,3,test,10,biomass,ideal,bad_quality,bad_quality,low_resource,L3_BIO_BBL,"R[SOW, R[DRILL, C[TIME, FILTER, AIR], REFINE], FERTILIZE]",probe,probe,probe,,probe,probe,probe,probe,,probe,probe,15,15,15,,8,2,15,15,,16,16
