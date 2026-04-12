@@ -1,11 +1,11 @@
 """Task-specific split allocation for the GCSG benchmark tasks.
 
-Provides split allocation for the 10-task benchmark design plus adaptation
+Provides split allocation for the 11-task benchmark design plus adaptation
 sub-pool construction for interleaved training/probing schedules.
 
-Named split options used by the 10-task benchmark:
+Named split options used by the 11-task benchmark:
 
-    random-small       — T1 / T2 / T6 / T7  24 train / 24 probe
+    random-small       — T1 / T2 / T7 / T8  24 train / 24 probe
                          L1 (8/8)  L2 (8/8)  L3 (8/8)
 
     accelerated-small  — T3                  12 train / 24 probe
@@ -24,12 +24,18 @@ Named split options used by the 10-task benchmark:
                          L1 probe = 7 (geosphere_chain has no holdout variant).
                          L3 probe = 9 to compensate and keep total probe at 24.
 
-    random-large       — T9 / T10            32 train / 24 probe
+    combo-holdout      — T6                  24 train / 24 probe
+                         L1 (8/0)  L2 (8/8)  L3 (8/16)
+                         Train: same-type combos (BB/LL at L2; BBB/LLL at L3).
+                         Probe: cross-type combos (BL/LB at L2; BBL/LBB/BLB/LBL at L3).
+                         Canonical-only — read from t6_split CSV column.
+
+    random-large       — T10 / T11           32 train / 24 probe
                          L1 (8/0)  L2 (8/8)  L3 (16/16)
-                         For T9 the scarcity-affected gold keys are split
+                         For T10 the scarcity-affected gold keys are split
                          evenly between train and probe.
 
-    transfer-probe     — T8 EFGHI            0 train / 32 probe
+    transfer-probe     — T9 EFGHI            0 train / 32 probe
                          L1 (0/8)  L2 (0/8)  L3 (0/8)
                          Pure probe split for the transfer environment.
 
@@ -76,11 +82,12 @@ T4_HOLDOUT_CRITERIA = ["target_is_biomass", "geosphere_is_bad_quality"]
 
 # Split option -> (base_split_type, holdout_criteria_list)
 SPLIT_OPTION_SPECS: dict[str, tuple[str, list[str]]] = {
-    # 10-task named aliases (active).
+    # 11-task named aliases (active).
     "random-small":       ("random_small",       []),
     "accelerated-small":  ("accelerated_small",  []),
     "goalwise-small":     ("goalwise_small",     []),
     "holdout-small":      ("holdout_small",      T4_HOLDOUT_CRITERIA),
+    "combo-holdout":      ("combo_holdout",      []),
     "random-large":       ("random_large",       []),
     "transfer-probe":     ("transfer_probe",     []),
 }
