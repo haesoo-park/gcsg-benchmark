@@ -1,54 +1,54 @@
 task_id,mission_id,source_mission_id,goal_level,mission_split,split_index,target_zone,furnace_condition,pipeline_condition,conduit_condition,archive_condition,basin_condition,template_id,gold_action_sequence,t9_split,t9_order
-EFGHI,L1-0008,efghi_sequence_0001,1,train,1,furnace,low_resource,ideal,ideal,ideal,ideal,L1_FUR_L,"C[FLOW, IGNITE, SMELT, TEMPER]",probe,5
-EFGHI,L1-0005,efghi_sequence_0006,1,train,2,conduit,ideal,ideal,bad_quality,ideal,ideal,L1_CON_B,"R[ROUTE, INSULATE, DATA, SEAL]",probe,18
-EFGHI,L1-0006,efghi_sequence_0005,1,train,3,conduit,ideal,ideal,low_resource,ideal,ideal,L1_CON_L,"C[ROUTE, INSULATE, DATA, SEAL]",probe,28
-EFGHI,L1-0010,efghi_sequence_0003,1,train,4,pipeline,ideal,low_resource,ideal,ideal,ideal,L1_PIP_L,"C[PUMP, WIRE, PRESSURIZE]",probe,21
-EFGHI,L1-0003,efghi_sequence_0010,1,train,5,basin,ideal,ideal,ideal,ideal,bad_quality,L1_BAS_B,"R[DRAIN, HEAT, CYCLE]",probe,8
-EFGHI,L1-0007,efghi_sequence_0002,1,train,6,furnace,bad_quality,ideal,ideal,ideal,ideal,L1_FUR_B,"R[FLOW, IGNITE, SMELT, TEMPER]",probe,3
-EFGHI,L1-0002,efghi_sequence_0007,1,train,7,archive,ideal,ideal,ideal,low_resource,ideal,L1_ARC_L,"C[FLUID, CATALOG]",,
-EFGHI,L1-0001,efghi_sequence_0008,1,test,1,archive,ideal,ideal,ideal,bad_quality,ideal,L1_ARC_B,"R[FLUID, CATALOG]",,
-EFGHI,L1-0009,efghi_sequence_0004,1,test,2,pipeline,ideal,bad_quality,ideal,ideal,ideal,L1_PIP_B,"R[PUMP, WIRE, PRESSURIZE]",probe,13
-EFGHI,L1-0004,efghi_sequence_0009,1,test,3,basin,ideal,ideal,ideal,ideal,low_resource,L1_BAS_L,"C[DRAIN, HEAT, CYCLE]",probe,27
-EFGHI,L2-0009,efghi_sequence_0022,2,train,1,conduit,ideal,ideal,bad_quality,bad_quality,ideal,L2_CON_BB,"R[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL]",,
-EFGHI,L2-0007,efghi_sequence_0028,2,train,2,basin,bad_quality,ideal,ideal,ideal,low_resource,L2_BAS_LB,"C[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE]",,
+EFGHI,L1-0008,efghi_sequence_0001,1,train,1,furnace,low_resource,ideal,ideal,ideal,ideal,L1_FUR_L,"C[FLOW, IGNITE, SMELT, TEMPER]",probe,3
+EFGHI,L1-0005,efghi_sequence_0006,1,train,2,conduit,ideal,ideal,bad_quality,ideal,ideal,L1_CON_B,"R[ROUTE, INSULATE, DATA, SEAL]",,
+EFGHI,L1-0006,efghi_sequence_0005,1,train,3,conduit,ideal,ideal,low_resource,ideal,ideal,L1_CON_L,"C[ROUTE, INSULATE, DATA, SEAL]",probe,5
+EFGHI,L1-0010,efghi_sequence_0003,1,train,4,pipeline,ideal,low_resource,ideal,ideal,ideal,L1_PIP_L,"C[PUMP, WIRE, PRESSURIZE]",probe,18
+EFGHI,L1-0003,efghi_sequence_0010,1,train,5,basin,ideal,ideal,ideal,ideal,bad_quality,L1_BAS_B,"R[DRAIN, HEAT, CYCLE]",probe,13
+EFGHI,L1-0007,efghi_sequence_0002,1,train,6,furnace,bad_quality,ideal,ideal,ideal,ideal,L1_FUR_B,"R[FLOW, IGNITE, SMELT, TEMPER]",probe,21
+EFGHI,L1-0002,efghi_sequence_0007,1,train,7,archive,ideal,ideal,ideal,low_resource,ideal,L1_ARC_L,"C[FLUID, CATALOG]",probe,27
+EFGHI,L1-0001,efghi_sequence_0008,1,test,1,archive,ideal,ideal,ideal,bad_quality,ideal,L1_ARC_B,"R[FLUID, CATALOG]",probe,28
+EFGHI,L1-0009,efghi_sequence_0004,1,test,2,pipeline,ideal,bad_quality,ideal,ideal,ideal,L1_PIP_B,"R[PUMP, WIRE, PRESSURIZE]",,
+EFGHI,L1-0004,efghi_sequence_0009,1,test,3,basin,ideal,ideal,ideal,ideal,low_resource,L1_BAS_L,"C[DRAIN, HEAT, CYCLE]",probe,8
+EFGHI,L2-0009,efghi_sequence_0022,2,train,1,conduit,ideal,ideal,bad_quality,bad_quality,ideal,L2_CON_BB,"R[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL]",probe,11
+EFGHI,L2-0007,efghi_sequence_0028,2,train,2,basin,bad_quality,ideal,ideal,ideal,low_resource,L2_BAS_LB,"C[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE]",probe,25
 EFGHI,L2-0004,efghi_sequence_0023,2,train,3,archive,ideal,ideal,ideal,low_resource,low_resource,L2_ARC_LL,"C[C[DRAIN, HEAT, CYCLE], CATALOG]",,
 EFGHI,L2-0019,efghi_sequence_0016,2,train,4,pipeline,ideal,low_resource,bad_quality,ideal,ideal,L2_PIP_LB,"C[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE]",,
-EFGHI,L2-0010,efghi_sequence_0021,2,train,5,conduit,ideal,ideal,bad_quality,low_resource,ideal,L2_CON_BL,"R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL]",probe,1
-EFGHI,L2-0002,efghi_sequence_0025,2,train,6,archive,ideal,ideal,ideal,bad_quality,low_resource,L2_ARC_BL,"R[C[DRAIN, HEAT, CYCLE], CATALOG]",probe,25
-EFGHI,L2-0001,efghi_sequence_0026,2,train,7,archive,ideal,ideal,ideal,bad_quality,bad_quality,L2_ARC_BB,"R[R[DRAIN, HEAT, CYCLE], CATALOG]",probe,17
-EFGHI,L2-0016,efghi_sequence_0011,2,train,8,furnace,low_resource,low_resource,ideal,ideal,ideal,L2_FUR_LL,"C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,6
-EFGHI,L2-0014,efghi_sequence_0013,2,train,9,furnace,bad_quality,low_resource,ideal,ideal,ideal,L2_FUR_BL,"R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",,
+EFGHI,L2-0010,efghi_sequence_0021,2,train,5,conduit,ideal,ideal,bad_quality,low_resource,ideal,L2_CON_BL,"R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL]",probe,22
+EFGHI,L2-0002,efghi_sequence_0025,2,train,6,archive,ideal,ideal,ideal,bad_quality,low_resource,L2_ARC_BL,"R[C[DRAIN, HEAT, CYCLE], CATALOG]",,
+EFGHI,L2-0001,efghi_sequence_0026,2,train,7,archive,ideal,ideal,ideal,bad_quality,bad_quality,L2_ARC_BB,"R[R[DRAIN, HEAT, CYCLE], CATALOG]",,
+EFGHI,L2-0016,efghi_sequence_0011,2,train,8,furnace,low_resource,low_resource,ideal,ideal,ideal,L2_FUR_LL,"C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,12
+EFGHI,L2-0014,efghi_sequence_0013,2,train,9,furnace,bad_quality,low_resource,ideal,ideal,ideal,L2_FUR_BL,"R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,6
 EFGHI,L2-0018,efghi_sequence_0017,2,train,10,pipeline,ideal,bad_quality,low_resource,ideal,ideal,L2_PIP_BL,"R[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE]",,
-EFGHI,L2-0006,efghi_sequence_0029,2,train,11,basin,low_resource,ideal,ideal,ideal,bad_quality,L2_BAS_BL,"R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE]",probe,22
-EFGHI,L2-0011,efghi_sequence_0020,2,train,12,conduit,ideal,ideal,low_resource,bad_quality,ideal,L2_CON_LB,"C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL]",,
-EFGHI,L2-0015,efghi_sequence_0012,2,train,13,furnace,low_resource,bad_quality,ideal,ideal,ideal,L2_FUR_LB,"C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,11
-EFGHI,L2-0020,efghi_sequence_0015,2,train,14,pipeline,ideal,low_resource,low_resource,ideal,ideal,L2_PIP_LL,"C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE]",,
-EFGHI,L2-0013,efghi_sequence_0014,2,test,1,furnace,bad_quality,bad_quality,ideal,ideal,ideal,L2_FUR_BB,"R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,30
-EFGHI,L2-0003,efghi_sequence_0024,2,test,2,archive,ideal,ideal,ideal,low_resource,bad_quality,L2_ARC_LB,"C[R[DRAIN, HEAT, CYCLE], CATALOG]",probe,12
+EFGHI,L2-0006,efghi_sequence_0029,2,train,11,basin,low_resource,ideal,ideal,ideal,bad_quality,L2_BAS_BL,"R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE]",,6
+EFGHI,L2-0011,efghi_sequence_0020,2,train,12,conduit,ideal,ideal,low_resource,bad_quality,ideal,L2_CON_LB,"C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL]",probe,30
+EFGHI,L2-0015,efghi_sequence_0012,2,train,13,furnace,low_resource,bad_quality,ideal,ideal,ideal,L2_FUR_LB,"C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",,
+EFGHI,L2-0020,efghi_sequence_0015,2,train,14,pipeline,ideal,low_resource,low_resource,ideal,ideal,L2_PIP_LL,"C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE]",probe,17
+EFGHI,L2-0013,efghi_sequence_0014,2,test,1,furnace,bad_quality,bad_quality,ideal,ideal,ideal,L2_FUR_BB,"R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER]",,14
+EFGHI,L2-0003,efghi_sequence_0024,2,test,2,archive,ideal,ideal,ideal,low_resource,bad_quality,L2_ARC_LB,"C[R[DRAIN, HEAT, CYCLE], CATALOG]",,
 EFGHI,L2-0012,efghi_sequence_0019,2,test,3,conduit,ideal,ideal,low_resource,low_resource,ideal,L2_CON_LL,"C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL]",,
 EFGHI,L2-0017,efghi_sequence_0018,2,test,4,pipeline,ideal,bad_quality,bad_quality,ideal,ideal,L2_PIP_BB,"R[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE]",,
 EFGHI,L2-0008,efghi_sequence_0027,2,test,5,basin,low_resource,ideal,ideal,ideal,low_resource,L2_BAS_LL,"C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE]",,
-EFGHI,L2-0005,efghi_sequence_0030,2,test,6,basin,bad_quality,ideal,ideal,ideal,bad_quality,L2_BAS_BB,"R[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE]",,
-EFGHI,L3-0015,efghi_sequence_0064,3,train,1,basin,low_resource,bad_quality,ideal,ideal,low_resource,L3_BAS_LLB,"C[DRAIN, C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,9
+EFGHI,L2-0005,efghi_sequence_0030,2,test,6,basin,bad_quality,ideal,ideal,ideal,bad_quality,L2_BAS_BB,"R[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE]",probe,1
+EFGHI,L3-0015,efghi_sequence_0064,3,train,1,basin,low_resource,bad_quality,ideal,ideal,low_resource,L3_BAS_LLB,"C[DRAIN, C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,15
 EFGHI,L3-0017,efghi_sequence_0054,3,train,2,conduit,ideal,ideal,bad_quality,bad_quality,bad_quality,L3_CON_BBB,"R[ROUTE, INSULATE, R[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",,1
 EFGHI,L3-0012,efghi_sequence_0067,3,train,3,basin,low_resource,low_resource,ideal,ideal,bad_quality,L3_BAS_BLL,"R[DRAIN, C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L3-0030,efghi_sequence_0033,3,train,4,furnace,low_resource,bad_quality,low_resource,ideal,ideal,L3_FUR_LBL,"C[R[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L3-0014,efghi_sequence_0065,3,train,5,basin,bad_quality,low_resource,ideal,ideal,low_resource,L3_BAS_LBL,"C[DRAIN, R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
+EFGHI,L3-0014,efghi_sequence_0065,3,train,5,basin,bad_quality,low_resource,ideal,ideal,low_resource,L3_BAS_LBL,"C[DRAIN, R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,31
 EFGHI,L3-0005,efghi_sequence_0058,3,train,6,archive,bad_quality,ideal,ideal,low_resource,bad_quality,L3_ARC_LBB,"C[R[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
-EFGHI,L3-0006,efghi_sequence_0057,3,train,7,archive,low_resource,ideal,ideal,low_resource,bad_quality,L3_ARC_LBL,"C[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",probe,15
-EFGHI,L3-0009,efghi_sequence_0070,3,train,8,basin,bad_quality,bad_quality,ideal,ideal,bad_quality,L3_BAS_BBB,"R[DRAIN, R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,16
-EFGHI,L3-0038,efghi_sequence_0041,3,train,9,pipeline,ideal,low_resource,bad_quality,low_resource,ideal,L3_PIP_LBL,"C[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE]",probe,24
-EFGHI,L3-0011,efghi_sequence_0068,3,train,10,basin,low_resource,bad_quality,ideal,ideal,bad_quality,L3_BAS_BLB,"R[DRAIN, C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,31
+EFGHI,L3-0006,efghi_sequence_0057,3,train,7,archive,low_resource,ideal,ideal,low_resource,bad_quality,L3_ARC_LBL,"C[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,10
+EFGHI,L3-0009,efghi_sequence_0070,3,train,8,basin,bad_quality,bad_quality,ideal,ideal,bad_quality,L3_BAS_BBB,"R[DRAIN, R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,9
+EFGHI,L3-0038,efghi_sequence_0041,3,train,9,pipeline,ideal,low_resource,bad_quality,low_resource,ideal,L3_PIP_LBL,"C[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE]",,
+EFGHI,L3-0011,efghi_sequence_0068,3,train,10,basin,low_resource,bad_quality,ideal,ideal,bad_quality,L3_BAS_BLB,"R[DRAIN, C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,4
 EFGHI,L3-0029,efghi_sequence_0034,3,train,11,furnace,low_resource,bad_quality,bad_quality,ideal,ideal,L3_FUR_LBB,"C[R[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L3-0020,efghi_sequence_0051,3,train,12,conduit,ideal,ideal,bad_quality,low_resource,low_resource,L3_CON_BLL,"R[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",,
 EFGHI,L3-0032,efghi_sequence_0031,3,train,13,furnace,low_resource,low_resource,low_resource,ideal,ideal,L3_FUR_LLL,"C[C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L3-0018,efghi_sequence_0053,3,train,14,conduit,ideal,ideal,bad_quality,bad_quality,low_resource,L3_CON_BBL,"R[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",,16
-EFGHI,L3-0034,efghi_sequence_0045,3,train,15,pipeline,ideal,bad_quality,bad_quality,low_resource,ideal,L3_PIP_BBL,"R[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE]",,
+EFGHI,L3-0018,efghi_sequence_0053,3,train,14,conduit,ideal,ideal,bad_quality,bad_quality,low_resource,L3_CON_BBL,"R[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",probe,7
+EFGHI,L3-0034,efghi_sequence_0045,3,train,15,pipeline,ideal,bad_quality,bad_quality,low_resource,ideal,L3_PIP_BBL,"R[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE]",probe,24
 EFGHI,L3-0001,efghi_sequence_0062,3,train,16,archive,bad_quality,ideal,ideal,bad_quality,bad_quality,L3_ARC_BBB,"R[R[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L3-0040,efghi_sequence_0039,3,train,17,pipeline,ideal,low_resource,low_resource,low_resource,ideal,L3_PIP_LLL,"C[PUMP, C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L3-0025,efghi_sequence_0038,3,train,18,furnace,bad_quality,bad_quality,bad_quality,ideal,ideal,L3_FUR_BBB,"R[R[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L3-0027,efghi_sequence_0036,3,train,19,furnace,bad_quality,low_resource,bad_quality,ideal,ideal,L3_FUR_BLB,"R[C[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,7
-EFGHI,L3-0028,efghi_sequence_0035,3,train,20,furnace,bad_quality,low_resource,low_resource,ideal,ideal,L3_FUR_BLL,"R[C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,12
+EFGHI,L3-0027,efghi_sequence_0036,3,train,19,furnace,bad_quality,low_resource,bad_quality,ideal,ideal,L3_FUR_BLB,"R[C[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
+EFGHI,L3-0028,efghi_sequence_0035,3,train,20,furnace,bad_quality,low_resource,low_resource,ideal,ideal,L3_FUR_BLL,"R[C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,23
 EFGHI,L3-0036,efghi_sequence_0043,3,train,21,pipeline,ideal,bad_quality,low_resource,low_resource,ideal,L3_PIP_BLL,"R[PUMP, C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L3-0008,efghi_sequence_0055,3,train,22,archive,low_resource,ideal,ideal,low_resource,low_resource,L3_ARC_LLL,"C[C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L3-0013,efghi_sequence_0066,3,train,23,basin,bad_quality,bad_quality,ideal,ideal,low_resource,L3_BAS_LBB,"C[DRAIN, R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
@@ -59,24 +59,24 @@ EFGHI,L3-0003,efghi_sequence_0060,3,train,27,archive,bad_quality,ideal,ideal,bad
 EFGHI,L3-0021,efghi_sequence_0050,3,train,28,conduit,ideal,ideal,low_resource,bad_quality,bad_quality,L3_CON_LBB,"C[ROUTE, INSULATE, R[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",,
 EFGHI,L3-0033,efghi_sequence_0046,3,test,1,pipeline,ideal,bad_quality,bad_quality,bad_quality,ideal,L3_PIP_BBB,"R[PUMP, R[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L3-0031,efghi_sequence_0032,3,test,2,furnace,low_resource,low_resource,bad_quality,ideal,ideal,L3_FUR_LLB,"C[C[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L3-0004,efghi_sequence_0059,3,test,3,archive,low_resource,ideal,ideal,bad_quality,low_resource,L3_ARC_BLL,"R[C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",probe,23
+EFGHI,L3-0004,efghi_sequence_0059,3,test,3,archive,low_resource,ideal,ideal,bad_quality,low_resource,L3_ARC_BLL,"R[C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L3-0039,efghi_sequence_0040,3,test,4,pipeline,ideal,low_resource,low_resource,bad_quality,ideal,L3_PIP_LLB,"C[PUMP, C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L3-0022,efghi_sequence_0049,3,test,5,conduit,ideal,ideal,low_resource,bad_quality,low_resource,L3_CON_LBL,"C[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",,
 EFGHI,L3-0035,efghi_sequence_0044,3,test,6,pipeline,ideal,bad_quality,low_resource,bad_quality,ideal,L3_PIP_BLB,"R[PUMP, C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L3-0007,efghi_sequence_0056,3,test,7,archive,bad_quality,ideal,ideal,low_resource,low_resource,L3_ARC_LLB,"C[C[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L3-0002,efghi_sequence_0061,3,test,8,archive,low_resource,ideal,ideal,bad_quality,bad_quality,L3_ARC_BBL,"R[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
-EFGHI,L3-0024,efghi_sequence_0047,3,test,9,conduit,ideal,ideal,low_resource,low_resource,low_resource,L3_CON_LLL,"C[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",probe,2
+EFGHI,L3-0024,efghi_sequence_0047,3,test,9,conduit,ideal,ideal,low_resource,low_resource,low_resource,L3_CON_LLL,"C[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL]",probe,16
 EFGHI,L3-0037,efghi_sequence_0042,3,test,10,pipeline,ideal,low_resource,bad_quality,bad_quality,ideal,L3_PIP_LBB,"C[PUMP, R[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L3-0010,efghi_sequence_0069,3,test,11,basin,bad_quality,low_resource,ideal,ideal,bad_quality,L3_BAS_BBL,"R[DRAIN, R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
-EFGHI,L3-0016,efghi_sequence_0063,3,test,12,basin,low_resource,low_resource,ideal,ideal,low_resource,L3_BAS_LLL,"C[DRAIN, C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,8
-EFGHI,L4-0015,efghi_sequence_0120,4,train,1,archive,low_resource,bad_quality,ideal,low_resource,low_resource,L4_ARC_LLLB,"C[C[DRAIN, C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
+EFGHI,L3-0016,efghi_sequence_0063,3,test,12,basin,low_resource,low_resource,ideal,ideal,low_resource,L3_BAS_LLL,"C[DRAIN, C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,2
+EFGHI,L4-0015,efghi_sequence_0120,4,train,1,archive,low_resource,bad_quality,ideal,low_resource,low_resource,L4_ARC_LLLB,"C[C[DRAIN, C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",probe,4
 EFGHI,L4-0020,efghi_sequence_0147,4,train,2,basin,bad_quality,low_resource,low_resource,ideal,bad_quality,L4_BAS_BBLL,"R[DRAIN, R[C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0053,efghi_sequence_0082,4,train,3,furnace,bad_quality,low_resource,bad_quality,bad_quality,ideal,L4_FUR_BLBB,"R[C[PUMP, R[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0021,efghi_sequence_0146,4,train,4,basin,low_resource,bad_quality,bad_quality,ideal,bad_quality,L4_BAS_BLBB,"R[DRAIN, C[R[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0061,efghi_sequence_0074,4,train,5,furnace,low_resource,low_resource,bad_quality,bad_quality,ideal,L4_FUR_LLBB,"C[C[PUMP, R[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L4-0026,efghi_sequence_0141,4,train,6,basin,bad_quality,bad_quality,low_resource,ideal,low_resource,L4_BAS_LBBL,"C[DRAIN, R[R[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,0
+EFGHI,L4-0026,efghi_sequence_0141,4,train,6,basin,bad_quality,bad_quality,low_resource,ideal,low_resource,L4_BAS_LBBL,"C[DRAIN, R[R[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0074,efghi_sequence_0093,4,train,7,pipeline,ideal,low_resource,bad_quality,bad_quality,low_resource,L4_PIP_LBBL,"C[PUMP, R[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
-EFGHI,L4-0046,efghi_sequence_0105,4,train,8,conduit,low_resource,ideal,low_resource,low_resource,bad_quality,L4_CON_LLBL,"C[ROUTE, INSULATE, C[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",probe,26
+EFGHI,L4-0046,efghi_sequence_0105,4,train,8,conduit,low_resource,ideal,low_resource,low_resource,bad_quality,L4_CON_LLBL,"C[ROUTE, INSULATE, C[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0059,efghi_sequence_0076,4,train,9,furnace,low_resource,bad_quality,low_resource,bad_quality,ideal,L4_FUR_LBLB,"C[R[PUMP, C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0005,efghi_sequence_0130,4,train,10,archive,bad_quality,bad_quality,ideal,bad_quality,low_resource,L4_ARC_BLBB,"R[C[DRAIN, R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L4-0011,efghi_sequence_0124,4,train,11,archive,low_resource,bad_quality,ideal,low_resource,bad_quality,L4_ARC_LBLB,"C[R[DRAIN, C[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
@@ -90,29 +90,29 @@ EFGHI,L4-0036,efghi_sequence_0115,4,train,18,conduit,low_resource,ideal,bad_qual
 EFGHI,L4-0050,efghi_sequence_0085,4,train,19,furnace,bad_quality,bad_quality,bad_quality,low_resource,ideal,L4_FUR_BBBL,"R[R[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0042,efghi_sequence_0109,4,train,20,conduit,low_resource,ideal,low_resource,bad_quality,bad_quality,L4_CON_LBBL,"C[ROUTE, INSULATE, R[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0047,efghi_sequence_0104,4,train,21,conduit,bad_quality,ideal,low_resource,low_resource,low_resource,L4_CON_LLLB,"C[ROUTE, INSULATE, C[C[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
-EFGHI,L4-0080,efghi_sequence_0087,4,train,22,pipeline,ideal,low_resource,low_resource,low_resource,low_resource,L4_PIP_LLLL,"C[PUMP, C[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",probe,19
+EFGHI,L4-0080,efghi_sequence_0087,4,train,22,pipeline,ideal,low_resource,low_resource,low_resource,low_resource,L4_PIP_LLLL,"C[PUMP, C[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",probe,14
 EFGHI,L4-0034,efghi_sequence_0117,4,train,23,conduit,low_resource,ideal,bad_quality,bad_quality,bad_quality,L4_CON_BBBL,"R[ROUTE, INSULATE, R[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0024,efghi_sequence_0143,4,train,24,basin,low_resource,low_resource,low_resource,ideal,bad_quality,L4_BAS_BLLL,"R[DRAIN, C[C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0073,efghi_sequence_0094,4,train,25,pipeline,ideal,low_resource,bad_quality,bad_quality,bad_quality,L4_PIP_LBBB,"C[PUMP, R[ROUTE, INSULATE, R[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
-EFGHI,L4-0056,efghi_sequence_0079,4,train,26,furnace,bad_quality,low_resource,low_resource,low_resource,ideal,L4_FUR_BLLL,"R[C[PUMP, C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
+EFGHI,L4-0056,efghi_sequence_0079,4,train,26,furnace,bad_quality,low_resource,low_resource,low_resource,ideal,L4_FUR_BLLL,"R[C[PUMP, C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,29
 EFGHI,L4-0078,efghi_sequence_0089,4,train,27,pipeline,ideal,low_resource,low_resource,bad_quality,low_resource,L4_PIP_LLBL,"C[PUMP, C[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
-EFGHI,L4-0028,efghi_sequence_0139,4,train,28,basin,bad_quality,low_resource,low_resource,ideal,low_resource,L4_BAS_LBLL,"C[DRAIN, R[C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",probe,4
+EFGHI,L4-0028,efghi_sequence_0139,4,train,28,basin,bad_quality,low_resource,low_resource,ideal,low_resource,L4_BAS_LBLL,"C[DRAIN, R[C[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0065,efghi_sequence_0102,4,train,29,pipeline,ideal,bad_quality,bad_quality,bad_quality,bad_quality,L4_PIP_BBBB,"R[PUMP, R[ROUTE, INSULATE, R[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L4-0008,efghi_sequence_0127,4,train,30,archive,low_resource,low_resource,ideal,bad_quality,low_resource,L4_ARC_BLLL,"R[C[DRAIN, C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L4-0062,efghi_sequence_0073,4,train,31,furnace,low_resource,low_resource,bad_quality,low_resource,ideal,L4_FUR_LLBL,"C[C[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0051,efghi_sequence_0084,4,train,32,furnace,bad_quality,bad_quality,low_resource,bad_quality,ideal,L4_FUR_BBLB,"R[R[PUMP, C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0071,efghi_sequence_0096,4,train,33,pipeline,ideal,bad_quality,low_resource,low_resource,bad_quality,L4_PIP_BLLB,"R[PUMP, C[ROUTE, INSULATE, C[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
-EFGHI,L4-0044,efghi_sequence_0107,4,train,34,conduit,low_resource,ideal,low_resource,bad_quality,low_resource,L4_CON_LBLL,"C[ROUTE, INSULATE, R[C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
+EFGHI,L4-0044,efghi_sequence_0107,4,train,34,conduit,low_resource,ideal,low_resource,bad_quality,low_resource,L4_CON_LBLL,"C[ROUTE, INSULATE, R[C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",probe,26
 EFGHI,L4-0016,efghi_sequence_0119,4,train,35,archive,low_resource,low_resource,ideal,low_resource,low_resource,L4_ARC_LLLL,"C[C[DRAIN, C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L4-0027,efghi_sequence_0140,4,train,36,basin,bad_quality,low_resource,bad_quality,ideal,low_resource,L4_BAS_LBLB,"C[DRAIN, R[C[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
-EFGHI,L4-0072,efghi_sequence_0095,4,train,37,pipeline,ideal,bad_quality,low_resource,low_resource,low_resource,L4_PIP_BLLL,"R[PUMP, C[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",probe,29
+EFGHI,L4-0072,efghi_sequence_0095,4,train,37,pipeline,ideal,bad_quality,low_resource,low_resource,low_resource,L4_PIP_BLLL,"R[PUMP, C[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L4-0069,efghi_sequence_0098,4,train,38,pipeline,ideal,bad_quality,low_resource,bad_quality,bad_quality,L4_PIP_BLBB,"R[PUMP, C[ROUTE, INSULATE, R[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
-EFGHI,L4-0014,efghi_sequence_0121,4,train,39,archive,bad_quality,low_resource,ideal,low_resource,low_resource,L4_ARC_LLBL,"C[C[DRAIN, R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",probe,20
+EFGHI,L4-0014,efghi_sequence_0121,4,train,39,archive,bad_quality,low_resource,ideal,low_resource,low_resource,L4_ARC_LLBL,"C[C[DRAIN, R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L4-0012,efghi_sequence_0123,4,train,40,archive,low_resource,low_resource,ideal,low_resource,bad_quality,L4_ARC_LBLL,"C[R[DRAIN, C[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L4-0045,efghi_sequence_0106,4,train,41,conduit,bad_quality,ideal,low_resource,low_resource,bad_quality,L4_CON_LLBB,"C[ROUTE, INSULATE, C[R[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0063,efghi_sequence_0072,4,train,42,furnace,low_resource,low_resource,low_resource,bad_quality,ideal,L4_FUR_LLLB,"C[C[PUMP, C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L4-0054,efghi_sequence_0081,4,train,43,furnace,bad_quality,low_resource,bad_quality,low_resource,ideal,L4_FUR_BLBL,"R[C[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L4-0039,efghi_sequence_0112,4,train,44,conduit,bad_quality,ideal,bad_quality,low_resource,low_resource,L4_CON_BLLB,"R[ROUTE, INSULATE, C[C[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
+EFGHI,L4-0054,efghi_sequence_0081,4,train,43,furnace,bad_quality,low_resource,bad_quality,low_resource,ideal,L4_FUR_BLBL,"R[C[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,0
+EFGHI,L4-0039,efghi_sequence_0112,4,train,44,conduit,bad_quality,ideal,bad_quality,low_resource,low_resource,L4_CON_BLLB,"R[ROUTE, INSULATE, C[C[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",probe,20
 EFGHI,L4-0057,efghi_sequence_0078,4,train,45,furnace,low_resource,bad_quality,bad_quality,bad_quality,ideal,L4_FUR_LBBB,"C[R[PUMP, R[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0040,efghi_sequence_0111,4,train,46,conduit,low_resource,ideal,bad_quality,low_resource,low_resource,L4_CON_BLLL,"R[ROUTE, INSULATE, C[C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0029,efghi_sequence_0138,4,train,47,basin,low_resource,bad_quality,bad_quality,ideal,low_resource,L4_BAS_LLBB,"C[DRAIN, C[R[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
@@ -129,10 +129,10 @@ EFGHI,L4-0037,efghi_sequence_0114,4,test,1,conduit,bad_quality,ideal,bad_quality
 EFGHI,L4-0077,efghi_sequence_0090,4,test,2,pipeline,ideal,low_resource,low_resource,bad_quality,bad_quality,L4_PIP_LLBB,"C[PUMP, C[ROUTE, INSULATE, R[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L4-0079,efghi_sequence_0088,4,test,3,pipeline,ideal,low_resource,low_resource,low_resource,bad_quality,L4_PIP_LLLB,"C[PUMP, C[ROUTE, INSULATE, C[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L4-0055,efghi_sequence_0080,4,test,4,furnace,bad_quality,low_resource,low_resource,bad_quality,ideal,L4_FUR_BLLB,"R[C[PUMP, C[ROUTE, INSULATE, R[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L4-0067,efghi_sequence_0100,4,test,5,pipeline,ideal,bad_quality,bad_quality,low_resource,bad_quality,L4_PIP_BBLB,"R[PUMP, R[ROUTE, INSULATE, C[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",probe,10
+EFGHI,L4-0067,efghi_sequence_0100,4,test,5,pipeline,ideal,bad_quality,bad_quality,low_resource,bad_quality,L4_PIP_BBLB,"R[PUMP, R[ROUTE, INSULATE, C[R[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
 EFGHI,L4-0006,efghi_sequence_0129,4,test,6,archive,bad_quality,low_resource,ideal,bad_quality,low_resource,L4_ARC_BLBL,"R[C[DRAIN, R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
 EFGHI,L4-0002,efghi_sequence_0133,4,test,7,archive,bad_quality,low_resource,ideal,bad_quality,bad_quality,L4_ARC_BBBL,"R[R[DRAIN, R[C[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
-EFGHI,L4-0064,efghi_sequence_0071,4,test,8,furnace,low_resource,low_resource,low_resource,low_resource,ideal,L4_FUR_LLLL,"C[C[PUMP, C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",probe,14
+EFGHI,L4-0064,efghi_sequence_0071,4,test,8,furnace,low_resource,low_resource,low_resource,low_resource,ideal,L4_FUR_LLLL,"C[C[PUMP, C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0019,efghi_sequence_0148,4,test,9,basin,bad_quality,low_resource,bad_quality,ideal,bad_quality,L4_BAS_BBLB,"R[DRAIN, R[C[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0041,efghi_sequence_0110,4,test,10,conduit,bad_quality,ideal,low_resource,bad_quality,bad_quality,L4_CON_LBBB,"C[ROUTE, INSULATE, R[R[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0043,efghi_sequence_0108,4,test,11,conduit,bad_quality,ideal,low_resource,bad_quality,low_resource,L4_CON_LBLB,"C[ROUTE, INSULATE, R[C[DRAIN, R[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
@@ -141,11 +141,11 @@ EFGHI,L4-0007,efghi_sequence_0128,4,test,13,archive,low_resource,bad_quality,ide
 EFGHI,L4-0052,efghi_sequence_0083,4,test,14,furnace,bad_quality,bad_quality,low_resource,low_resource,ideal,L4_FUR_BBLL,"R[R[PUMP, C[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
 EFGHI,L4-0048,efghi_sequence_0103,4,test,15,conduit,low_resource,ideal,low_resource,low_resource,low_resource,L4_CON_LLLL,"C[ROUTE, INSULATE, C[C[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0076,efghi_sequence_0091,4,test,16,pipeline,ideal,low_resource,bad_quality,low_resource,low_resource,L4_PIP_LBLL,"C[PUMP, R[ROUTE, INSULATE, C[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
-EFGHI,L4-0009,efghi_sequence_0126,4,test,17,archive,bad_quality,bad_quality,ideal,low_resource,bad_quality,L4_ARC_LBBB,"C[R[DRAIN, R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",,
+EFGHI,L4-0009,efghi_sequence_0126,4,test,17,archive,bad_quality,bad_quality,ideal,low_resource,bad_quality,L4_ARC_LBBB,"C[R[DRAIN, R[R[PUMP, WIRE, PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE], CATALOG]",probe,19
 EFGHI,L4-0023,efghi_sequence_0144,4,test,18,basin,low_resource,low_resource,bad_quality,ideal,bad_quality,L4_BAS_BLLB,"R[DRAIN, C[C[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0038,efghi_sequence_0113,4,test,19,conduit,low_resource,ideal,bad_quality,low_resource,bad_quality,L4_CON_BLBL,"R[ROUTE, INSULATE, C[R[DRAIN, C[FLOW, IGNITE, SMELT, TEMPER], CYCLE], CATALOG], SEAL]",,
 EFGHI,L4-0058,efghi_sequence_0077,4,test,20,furnace,low_resource,bad_quality,bad_quality,low_resource,ideal,L4_FUR_LBBL,"C[R[PUMP, R[ROUTE, INSULATE, C[FLUID, CATALOG], SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER]",,
-EFGHI,L4-0070,efghi_sequence_0097,4,test,21,pipeline,ideal,bad_quality,low_resource,bad_quality,low_resource,L4_PIP_BLBL,"R[PUMP, C[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
+EFGHI,L4-0070,efghi_sequence_0097,4,test,21,pipeline,ideal,bad_quality,low_resource,bad_quality,low_resource,L4_PIP_BLBL,"R[PUMP, C[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",probe,10
 EFGHI,L4-0022,efghi_sequence_0145,4,test,22,basin,low_resource,bad_quality,low_resource,ideal,bad_quality,L4_BAS_BLBL,"R[DRAIN, C[R[PUMP, C[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0017,efghi_sequence_0150,4,test,23,basin,bad_quality,bad_quality,bad_quality,ideal,bad_quality,L4_BAS_BBBB,"R[DRAIN, R[R[PUMP, R[ROUTE, INSULATE, DATA, SEAL], PRESSURIZE], IGNITE, SMELT, TEMPER], CYCLE]",,
 EFGHI,L4-0066,efghi_sequence_0101,4,test,24,pipeline,ideal,bad_quality,bad_quality,bad_quality,low_resource,L4_PIP_BBBL,"R[PUMP, R[ROUTE, INSULATE, R[C[DRAIN, HEAT, CYCLE], CATALOG], SEAL], PRESSURIZE]",,
