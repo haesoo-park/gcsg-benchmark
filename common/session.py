@@ -790,7 +790,7 @@ def run_phased_session(
 
                 # ── v0.8.0: combine pending feedback with mission prompt ──
                 if _pending_feedback:
-                    actual_prompt = _pending_feedback + "\n\n---\n\n" + prompt_text
+                    actual_prompt = _pending_feedback + "\n\n=== NEXT MISSION ===\n\n" + prompt_text
                     _pending_feedback = ""
                 else:
                     actual_prompt = prompt_text

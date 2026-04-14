@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gcsg-common"
-version = "0.8.0"
+version = "0.8.1"
 description = "GCSG Benchmark — shared evaluation logic and dataset"
 requires-python = ">=3.9"
 dependencies = [

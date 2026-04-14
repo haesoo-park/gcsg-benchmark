@@ -102,7 +102,7 @@ K_SEVERITY_OPTIONS: dict[str, dict[str, dict[str, int]]] = {
 }
 
 K_SEVERITY_OPTIONS_ADAPTATION: dict[str, dict[str, dict[str, int]]] = {
-    "no_k_holdout":       {"train": {"min": 6, "max": 12}, "test": {"min": 6, "max": 12}},
+    "no_k_holdout":       {"train": {"min": 6, "max": 10}, "test": {"min": 6, "max": 10}},
     "some_k_holdout":     {"train": {"min": 6, "max": 10}, "test": {"min": 6, "max": 14}},
     "complete_k_holdout": {"train": {"min": 6, "max": 10}, "test": {"min": 11, "max": 14}},
 }
