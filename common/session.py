@@ -52,6 +52,28 @@ class APIFailError(RuntimeError):
     """
 
 
+class GateFailedError(RuntimeError):
+    """Raised mid-session when a designated gate phase fails its threshold.
+
+    Used by T10/T11 to fail-fast out of a single-session run without spawning
+    a second session (which would violate the single-session invariant and
+    double the token cost). Carries the partial results and the observed
+    metric value so the caller can log and decide.
+    """
+
+    def __init__(self, phase_name: str, metric_name: str, observed: float,
+                 threshold: float, partial_result: dict | None = None):
+        super().__init__(
+            f"Gate failed at phase='{phase_name}' metric='{metric_name}' "
+            f"observed={observed:.3f} < threshold={threshold:.3f}"
+        )
+        self.phase_name = phase_name
+        self.metric_name = metric_name
+        self.observed = float(observed)
+        self.threshold = float(threshold)
+        self.partial_result = partial_result or {}
+
+
 _API_FAIL_MARKERS = (
     "context length",
     "context_length",
@@ -610,6 +632,8 @@ def run_phased_session(
     # Structured quiz
     structured_quiz_questions: list[dict[str, Any]] | None = None,
     quiz_after_phases: list[str] | None = None,
+    # Gate check (for T10/T11 fail-fast without spawning a second session)
+    gate_check: dict[str, Any] | None = None,
     # Misc
     enable_live_mission_log: bool = False,
     session_label: str = "",
@@ -955,6 +979,40 @@ def run_phased_session(
                     prompt_config_depths=[],
                     context_init_style=ctx_option,
                 )
+
+            # ── gate check (fail-fast for T10/T11 single-session) ────
+            if gate_check is not None and phase.name == gate_check.get("after_phase"):
+                _metric_name = gate_check.get("metric", "final_probe_accuracy")
+                _threshold = float(gate_check.get("threshold", 0.0))
+                _pm = phase_metrics.get(phase.name, {})
+                _observed = _pm.get(_metric_name)
+                if _observed is None:
+                    # Fall back to alt keys used elsewhere in this codebase
+                    _observed = _pm.get("final_train_accuracy", 0.0)
+                _observed = float(_observed)
+                if _observed < _threshold:
+                    if enable_live_mission_log:
+                        _cond_lbl = session_label or ctx_option
+                        print(
+                            f"  ▸ {_cond_lbl} [{phase.name}] GATE FAILED — "
+                            f"{_metric_name}={_observed:.3f} < {_threshold:.3f}; "
+                            f"stopping session before subsequent phases"
+                        )
+                    _partial = {
+                        "phase_traces": dict(phase_traces),
+                        "all_traces": pd.DataFrame(all_trace_rows) if all_trace_rows else pd.DataFrame(),
+                        "phase_metrics": dict(phase_metrics),
+                        "retention_traces": dict(retention_traces),
+                        "quiz_results": dict(quiz_results),
+                        "saved_train_missions": list(saved_train_missions),
+                    }
+                    raise GateFailedError(
+                        phase_name=phase.name,
+                        metric_name=_metric_name,
+                        observed=_observed,
+                        threshold=_threshold,
+                        partial_result=_partial,
+                    )
 
             # ── retention probes after this phase ────────────────────
             if phase.name in retention_after and saved_train_missions:
