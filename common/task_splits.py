@@ -56,6 +56,7 @@ Structural rules enforced (per G-SRCG_Benchmark_Plan.md §Task Design):
 
 from __future__ import annotations
 
+import math
 import random
 from dataclasses import dataclass
 from typing import Any
@@ -1140,3 +1141,65 @@ def _build_integrate_pools(
         final_probe_rows=final_probe,
         summary=summary,
     )
+
+
+# ---------------------------------------------------------------------------
+# Runtime presentation order (v0.8.0)
+# ---------------------------------------------------------------------------
+
+def _interleave_by_level(
+    rows: list[dict[str, Any]], rng: random.Random,
+) -> list[dict[str, Any]]:
+    """Shuffle rows into a level-interleaved order using GCD-balanced chunks.
+
+    Groups missions by _goal_level, then creates N chunks (N = GCD of level
+    counts) where each chunk contains count/GCD missions from each level.
+    Within each chunk, the order is shuffled. This distributes difficulty
+    throughout the session while avoiding curriculum bias (L1->L2->L3).
+    """
+    by_lv: dict[int, list[dict[str, Any]]] = {}
+    for r in rows:
+        by_lv.setdefault(r["_goal_level"], []).append(r)
+
+    if not by_lv:
+        return []
+
+    if len(by_lv) == 1:
+        result = list(rows)
+        rng.shuffle(result)
+        return result
+
+    for lv in by_lv:
+        rng.shuffle(by_lv[lv])
+
+    counts = [len(by_lv[lv]) for lv in sorted(by_lv)]
+    n_chunks = math.gcd(*counts)
+
+    chunks: list[list[dict[str, Any]]] = [[] for _ in range(n_chunks)]
+    for lv in sorted(by_lv):
+        per_chunk = len(by_lv[lv]) // n_chunks
+        for i in range(n_chunks):
+            start = i * per_chunk
+            chunks[i].extend(by_lv[lv][start:start + per_chunk])
+
+    result: list[dict[str, Any]] = []
+    for chunk in chunks:
+        rng.shuffle(chunk)
+        result.extend(chunk)
+
+    return result
+
+
+def order_missions_for_run(
+    missions: list[dict[str, Any]],
+    run_index: int,
+    base_seed: int = 42,
+) -> list[dict[str, Any]]:
+    """Order missions using level-interleaved shuffle, deterministic per run.
+
+    Same missions + same run_index = same order (regardless of which task
+    calls this). This guarantees cross-task and cross-condition consistency
+    for shared-base tasks.
+    """
+    rng = random.Random(base_seed + run_index)
+    return _interleave_by_level(missions, rng)

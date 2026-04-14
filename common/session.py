@@ -745,6 +745,7 @@ def run_phased_session(
             fb_mode = str(phase.feedback_mode).strip().lower()
             phase_trace_rows: list[dict[str, Any]] = []
             _recent_success: list[bool] = []
+            _pending_feedback: str = ""  # v0.8.0: combine feedback with next mission
 
             for mission_idx, row in enumerate(phase.mission_rows):
                 # ── early stop check ────────────────────────────────
@@ -787,11 +788,18 @@ def run_phased_session(
                         prompt_style=prompt_style,
                     )
 
+                # ── v0.8.0: combine pending feedback with mission prompt ──
+                if _pending_feedback:
+                    actual_prompt = _pending_feedback + "\n\n---\n\n" + prompt_text
+                    _pending_feedback = ""
+                else:
+                    actual_prompt = prompt_text
+
                 # ── call LLM ─────────────────────────────────────────
                 raw_response = ""
                 parse_result = ParseResult([], False, False, "uninitialized", "")
                 try:
-                    structured = llm.prompt(prompt_text, schema=ActionPlan)
+                    structured = llm.prompt(actual_prompt, schema=ActionPlan)
                     actions = [str(t).strip().upper() for t in structured.actions]
                     if not actions:
                         raise ValueError("Schema response had empty actions.")
@@ -803,7 +811,7 @@ def run_phased_session(
                             f"mechanical API failure (schema call, phase={phase.name}): {schema_err}"
                         ) from schema_err
                     try:
-                        raw_response = llm.prompt(prompt_text)
+                        raw_response = llm.prompt(actual_prompt)
                         parse_result = parse_actions_from_raw_text(
                             raw_response, allowed_tokens, phase_action_regex,
                         )
@@ -831,6 +839,8 @@ def run_phased_session(
                     )
 
                 # ── feedback ─────────────────────────────────────────
+                # v0.8.0: store feedback to combine with next mission
+                # prompt, eliminating wasted model acknowledgment.
                 feedback_ack = ""
                 feedback_payload = ""
                 if is_train and fb_mode != "none":
@@ -841,14 +851,8 @@ def run_phased_session(
                         f" The optimal action sequence for that "
                         f"mission was: {json.dumps(gold_actions)}"
                     )
-                    if fb_mode == "feedback_and_ack":
-                        feedback_payload = _fb_prefix + _fb_body + "\nAcknowledge with: OK"
-                    else:
-                        feedback_payload = _fb_prefix + _fb_body
-                    try:
-                        feedback_ack = llm.prompt(feedback_payload)
-                    except Exception as err:
-                        feedback_ack = f"FEEDBACK_ACK_FAILED: {err}"
+                    feedback_payload = _fb_prefix + _fb_body
+                    _pending_feedback = feedback_payload
 
                 # ── build trace row ──────────────────────────────────
                 trace: dict[str, Any] = {
@@ -919,6 +923,14 @@ def run_phased_session(
                         f"success={s} | "
                         f"phase_acc=({phase_success_so_far}/{phase_missions_so_far})"
                     )
+
+            # ── flush pending feedback from last training mission ───
+            if _pending_feedback:
+                try:
+                    llm.prompt(_pending_feedback)
+                except Exception:
+                    pass
+                _pending_feedback = ""
 
             # ── phase summary log ────────────────────────────────────
             if enable_live_mission_log and phase_trace_rows:

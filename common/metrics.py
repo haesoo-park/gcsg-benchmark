@@ -87,68 +87,122 @@ def summarize_learning_metrics(
 
 # ─── Cross-condition learning efficiency ─────────────────────────────────
 
-# Comprehension Threshold (new_implementations_todo.md §4). Dropped from 0.50
-# to 0.30 so marginally-solvable conditions still earn partial credit. Ceilings
-# below 0.30 still short-circuit LE to 0.0 (the task is considered too hard to
-# confirm comprehension).
-MIN_CEILING_ACCURACY = 0.30
+# v0.8.0: Simple-LE = learning / ceiling.  Control condition dropped (always 0).
+# Ceiling gate raised from 0.30 → 0.50.
+MIN_CEILING_ACCURACY = 0.50
 
 
 def compute_learning_efficiency(
     *,
     ceiling_accuracy: float,
     learning_accuracy: float,
-    control_accuracy: float,
     min_ceiling_accuracy: float = MIN_CEILING_ACCURACY,
 ) -> dict[str, float]:
-    """Compute learning efficiency from three experimental conditions.
+    """Simple-LE = learning / ceiling.  Control condition removed (always 0).
 
-    learning_efficiency = (learning - control) / (ceiling - control)
-
-    Conditions:
-        ceiling:  Full context + feedback   (what's possible with full rules)
-        learning: Baseline only + feedback   (what the model learns from feedback)
-        control:  Baseline only + NO feedback (pretraining bias / exposure)
-
-    Validity gates:
-        1. ceiling_accuracy >= min_ceiling_accuracy  — ceiling must demonstrate
-           the task is meaningfully solvable. A ceiling of 0.3 and learning of
-           0.2 would otherwise score LE=0.67, equal to ceiling=1.0/learning=0.67.
-           If this fails, learning_efficiency = 0.0.
-        2. ceiling_accuracy > control_accuracy  — positive denominator.
-           If this fails, learning_efficiency = 0.0.
-        3. If learning_accuracy > ceiling_accuracy, the model exceeded the
-           ceiling, so learning_efficiency is clamped to 1.0 (perfect score).
-
-    Returns:
-        Dict with raw values, learning_efficiency (clamped to [0,1] when valid),
-        ceiling_valid (bool), and ceiling_fail_reason (str or None).
+    Gate: ceiling >= min_ceiling_accuracy (0.50).
+    Clamp: [0, 1].
     """
     base = {
         "ceiling_accuracy": ceiling_accuracy,
         "learning_accuracy": learning_accuracy,
-        "control_accuracy": control_accuracy,
-        "raw_learning_gain": learning_accuracy - control_accuracy,
-        "ceiling_headroom": ceiling_accuracy - control_accuracy,
     }
 
-    # Gate 1: ceiling must be high enough to demonstrate task solvability.
     if ceiling_accuracy < min_ceiling_accuracy:
         return {**base, "learning_efficiency": 0.0,
                 "ceiling_valid": False,
-                "ceiling_fail_reason": f"ceiling_accuracy {ceiling_accuracy:.3f} < min {min_ceiling_accuracy:.2f}"}
+                "ceiling_fail_reason": f"ceiling {ceiling_accuracy:.3f} < min {min_ceiling_accuracy:.2f}"}
 
-    # Gate 2: positive denominator.
-    denominator = ceiling_accuracy - control_accuracy
-    if denominator <= 0:
+    if ceiling_accuracy <= 0:
         return {**base, "learning_efficiency": 0.0,
                 "ceiling_valid": False,
-                "ceiling_fail_reason": "ceiling_accuracy <= control_accuracy"}
+                "ceiling_fail_reason": "ceiling_accuracy <= 0"}
 
-    # If learning exceeds ceiling, clamp to 1.0 (model exceeded the ceiling).
-    efficiency = max(0.0, min(1.0, (learning_accuracy - control_accuracy) / denominator))
+    efficiency = max(0.0, min(1.0, learning_accuracy / ceiling_accuracy))
     return {**base, "learning_efficiency": efficiency,
             "ceiling_valid": True, "ceiling_fail_reason": None}
+
+
+# ─── T10 Plasticity ─────────────────────────────────────────────────────
+
+def compute_plasticity(
+    *,
+    affected_accuracy: float,
+    not_affected_accuracy: float,
+) -> dict[str, float]:
+    """T10 plasticity = min(1.0, affected / not_affected).
+
+    Returns dict with plasticity score, raw ratio, and component accuracies.
+    """
+    if not_affected_accuracy <= 0:
+        return {"plasticity": 0.0, "plasticity_raw": 0.0,
+                "affected_accuracy": affected_accuracy,
+                "not_affected_accuracy": not_affected_accuracy,
+                "valid": False, "fail_reason": "not_affected_accuracy <= 0"}
+
+    raw = affected_accuracy / not_affected_accuracy
+    clamped = max(0.0, min(1.0, raw))
+    return {"plasticity": clamped, "plasticity_raw": raw,
+            "affected_accuracy": affected_accuracy,
+            "not_affected_accuracy": not_affected_accuracy,
+            "valid": True, "fail_reason": None}
+
+
+# ─── T11 Stability ──────────────────────────────────────────────────────
+
+def compute_stability(
+    *,
+    retention_accuracy: float,
+    main_study_accuracy: float,
+) -> dict[str, float]:
+    """T11 stability = min(1.0, retention / main_study).
+
+    Returns dict with stability score, raw ratio, and component accuracies.
+    """
+    if main_study_accuracy <= 0:
+        return {"stability": 0.0, "stability_raw": 0.0,
+                "retention_accuracy": retention_accuracy,
+                "main_study_accuracy": main_study_accuracy,
+                "valid": False, "fail_reason": "main_study_accuracy <= 0"}
+
+    raw = retention_accuracy / main_study_accuracy
+    clamped = max(0.0, min(1.0, raw))
+    return {"stability": clamped, "stability_raw": raw,
+            "retention_accuracy": retention_accuracy,
+            "main_study_accuracy": main_study_accuracy,
+            "valid": True, "fail_reason": None}
+
+
+# ─── Per-level LE decomposition (secondary metric) ──────────────────────
+
+def compute_per_level_le(
+    *,
+    ceiling_traces: pd.DataFrame,
+    learning_traces: pd.DataFrame,
+    min_ceiling_accuracy: float = MIN_CEILING_ACCURACY,
+) -> dict[str, float | None]:
+    """Compute Simple-LE per goal level (L1, L2, L3)."""
+    results: dict[str, float | None] = {}
+    for level in [1, 2, 3]:
+        ceil_level = ceiling_traces[ceiling_traces["goal_level"] == level]
+        learn_level = learning_traces[learning_traces["goal_level"] == level]
+
+        if len(ceil_level) == 0 or len(learn_level) == 0:
+            results[f"le_L{level}"] = None
+            continue
+
+        ceil_acc = float(ceil_level["mission_success"].mean())
+        learn_acc = float(learn_level["mission_success"].mean())
+
+        le_result = compute_learning_efficiency(
+            ceiling_accuracy=ceil_acc, learning_accuracy=learn_acc,
+            min_ceiling_accuracy=min_ceiling_accuracy,
+        )
+        results[f"le_L{level}"] = le_result["learning_efficiency"]
+        results[f"ceiling_L{level}"] = ceil_acc
+        results[f"learning_L{level}"] = learn_acc
+
+    return results
 
 
 def summarize_phase_comparison(

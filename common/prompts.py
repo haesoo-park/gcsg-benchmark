@@ -285,7 +285,7 @@ def _build_efghi_canonical_mission(row: dict[str, Any]) -> str:
     for zone in EFGHI_ZONE_ORDER:
         cond = format_condition(row[f"{zone}_condition"], "canonical")
         lines.append(f"{zone}: {cond}")
-    lines.append(f"Manage {zone} by doing as few actions as possible. What is your complete action sequence?".replace(zone, target))
+    lines.append(f"Manage {target} by doing as few actions as possible. What is your complete action sequence?")
     return "\n".join(lines)
 
 
