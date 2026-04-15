@@ -183,9 +183,16 @@ EFGHI_COMPOSITION_SYSTEM_PROMPT = (
 
 TRANSFER_TRANSITION_ANNOUNCEMENT = (
     "IMPORTANT UPDATE \u2014 You are now being transferred to a new "
-    "ecosystem. The zones, actions, and action templates have changed, "
-    "but the underlying management rules remain the same."
+    "ecosystem. The zones, actions, and action templates have changed."
 )
+# NOTE: v0.8.5 removes the previous trailing phrase
+# "but the underlying management rules remain the same." The prior wording
+# was a legitimate design concession for weaker models (it mechanically
+# told the model to transfer its learned rule), but it inflated T9 scores
+# for any model strong enough to follow the hint without needing to infer
+# structural analogy. Removing the phrase makes T9 a stricter blind-transfer
+# test: the model now has to recognise, on its own, that the compositional
+# rules induced on ABCD might apply to EFGHI.
 
 
 CONTEXT_BLOCKS = {
