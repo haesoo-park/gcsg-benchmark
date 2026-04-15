@@ -157,6 +157,28 @@ def build_gold_plan_for_row(
     )
 
 
+def _find_actions_recursive(payload: Any) -> list[Any] | None:
+    """Search nested dicts/lists for a list-valued 'actions' key.
+
+    Handles Anthropic tool-use wrappers like:
+        {"type": "tool_use", "input": {"actions": [...]}}
+    and arbitrarily wrapped responses.
+    """
+    if isinstance(payload, dict):
+        if "actions" in payload and isinstance(payload["actions"], list):
+            return payload["actions"]
+        for value in payload.values():
+            found = _find_actions_recursive(value)
+            if found is not None:
+                return found
+    elif isinstance(payload, list):
+        for item in payload:
+            found = _find_actions_recursive(item)
+            if found is not None:
+                return found
+    return None
+
+
 def _extract_json_object(raw_text: str) -> str | None:
     fence = re.search(r"```(?:json)?\s*(\{[\s\S]*?\})\s*```", raw_text, flags=re.IGNORECASE)
     if fence:
@@ -189,12 +211,32 @@ def parse_actions_from_raw_text(raw_text: Any, allowed_tokens: list[str], canoni
     allowed_set = set(allowed_tokens)
     payload_text = "" if raw_text is None else str(raw_text)
     strict_error = ""
+    double_error = ""
     extracted_error = ""
     try:
         payload = json.loads(payload_text)
-        if not isinstance(payload, dict) or "actions" not in payload:
-            raise ValueError("Missing top-level key 'actions'")
-        return ParseResult(_normalize_actions(payload["actions"], allowed_set), True, True, "json_strict", "")
+        # Some providers (OpenAI structured-outputs in json_object mode) emit
+        # the object as a JSON-encoded string, so json.loads returns a str.
+        # Try one more decode round before falling through.
+        if isinstance(payload, str):
+            try:
+                payload = json.loads(payload)
+                found = _find_actions_recursive(payload)
+                if found is not None:
+                    return ParseResult(
+                        _normalize_actions(found, allowed_set),
+                        True, False, "json_double_decoded", "",
+                    )
+            except Exception as inner_error:
+                double_error = str(inner_error)
+            raise ValueError("Outer JSON decoded to string, inner decode failed")
+        if isinstance(payload, dict) and "actions" in payload:
+            return ParseResult(_normalize_actions(payload["actions"], allowed_set), True, True, "json_strict", "")
+        # Fallback: look for nested 'actions' (tool-use wrappers etc.)
+        found = _find_actions_recursive(payload)
+        if found is not None:
+            return ParseResult(_normalize_actions(found, allowed_set), True, False, "json_nested", "")
+        raise ValueError("No 'actions' key found at any nesting level")
     except Exception as error:
         strict_error = str(error)
 
@@ -202,9 +244,12 @@ def parse_actions_from_raw_text(raw_text: Any, allowed_tokens: list[str], canoni
     if extracted is not None:
         try:
             payload = json.loads(extracted)
-            if not isinstance(payload, dict) or "actions" not in payload:
-                raise ValueError("Missing top-level key 'actions'")
-            return ParseResult(_normalize_actions(payload["actions"], allowed_set), True, False, "json_extracted", "")
+            if isinstance(payload, dict) and "actions" in payload:
+                return ParseResult(_normalize_actions(payload["actions"], allowed_set), True, False, "json_extracted", "")
+            found = _find_actions_recursive(payload)
+            if found is not None:
+                return ParseResult(_normalize_actions(found, allowed_set), True, False, "json_extracted_nested", "")
+            raise ValueError("No 'actions' key found at any nesting level")
         except Exception as error:
             extracted_error = str(error)
 
@@ -229,6 +274,8 @@ def parse_actions_from_raw_text(raw_text: Any, allowed_tokens: list[str], canoni
         return ParseResult(salvaged, True, False, "token_salvage", "")
 
     parser_error = f"strict: {strict_error}"
+    if double_error:
+        parser_error += f" | double: {double_error}"
     if extracted_error:
         parser_error += f" | extracted: {extracted_error}"
     if literal_error:

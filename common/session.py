@@ -300,6 +300,15 @@ def run_learning_session(
                 actions = [str(token).strip().upper() for token in structured.actions]
                 if not actions:
                     raise ValueError("Schema response had empty actions.")
+                # Guard against double-encoded structured output — some OpenAI
+                # models return actions=['{"actions":["SOW",...]}'] (the whole
+                # object stringified into a single list element). Detect by
+                # checking token membership; fall through to raw parser if bad.
+                if any(tok not in set(allowed_tokens) for tok in actions):
+                    raise ValueError(
+                        f"Schema response contained non-action tokens (likely "
+                        f"double-encoded): {actions[:2]}"
+                    )
                 raw_response = json.dumps({"actions": actions})
                 parse_result = ParseResult(actions, True, True, "schema", "")
             except Exception as schema_error:
@@ -827,6 +836,11 @@ def run_phased_session(
                     actions = [str(t).strip().upper() for t in structured.actions]
                     if not actions:
                         raise ValueError("Schema response had empty actions.")
+                    if any(tok not in set(allowed_tokens) for tok in actions):
+                        raise ValueError(
+                            f"Schema response contained non-action tokens "
+                            f"(likely double-encoded): {actions[:2]}"
+                        )
                     raw_response = json.dumps({"actions": actions})
                     parse_result = ParseResult(actions, True, True, "schema", "")
                 except Exception as schema_err:
@@ -1031,6 +1045,11 @@ def run_phased_session(
                         act_ret = [str(t).strip().upper() for t in structured_ret.actions]
                         if not act_ret:
                             raise ValueError("Empty")
+                        if any(tok not in set(base_allowed_tokens) for tok in act_ret):
+                            raise ValueError(
+                                f"Schema response contained non-action tokens "
+                                f"(likely double-encoded): {act_ret[:2]}"
+                            )
                         raw_ret = json.dumps({"actions": act_ret})
                         pr_ret = ParseResult(act_ret, True, True, "schema", "")
                     except Exception:

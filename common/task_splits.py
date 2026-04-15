@@ -36,8 +36,13 @@ Named split options used by the 11-task benchmark:
                          evenly between train and probe.
 
     transfer-probe     — T9 EFGHI            0 train / 32 probe
-                         L1 (0/8)  L2 (0/8)  L3 (0/8)
+                         L2 (0/8)  L3 (0/16)  L4 (0/8)
                          Pure probe split for the transfer environment.
+                         L1 omitted: the EFGHI environment prompt exposes
+                         the zone→primary-token resolution table, so an L1
+                         Chain probe reduces to table-lookup and does not
+                         test composition. L2/L3 are primary for LE; L4 is
+                         secondary (depth-4 nesting, unique to 5-zone EFGHI).
 
 Structural rules enforced (per G-SRCG_Benchmark_Plan.md §Task Design):
 
@@ -901,25 +906,28 @@ def _allocate_random_large(
 
 
 # ---------------------------------------------------------------------------
-# transfer-probe — Task 8 EFGHI — (0/32)
-# 0 train / 32 probe (8×L1 + 8×L2 + 8×L3 + 8×L4)
+# transfer-probe — Task 9 EFGHI — (0/32)
+# 0 train / 32 probe (0×L1 + 8×L2 + 16×L3 + 8×L4)
 # Pure probe split for the transfer environment — no training on EFGHI.
 # Globally unique golds across the probe set.
-# L4 probes test depth-4 nesting (unique to 5-zone EFGHI).
+# L1 is omitted: the EFGHI environment prompt exposes the zone→primary-token
+# resolution table, so an L1 Chain probe reduces to a table-lookup with no
+# compositional content. L2/L3 form the 24-mission primary-LE pool; L4 (8
+# probes) tests depth-4 nesting unique to 5-zone EFGHI and is reported as a
+# secondary outcome.
 # ---------------------------------------------------------------------------
 
 def _allocate_transfer_probe(
     l1: list[dict], l2: list[dict], l3: list[dict],
     l4: list[dict], rng: random.Random,
 ) -> tuple[list[dict], list[dict], list[dict]]:
-    _, l1_probe, l1_unused = _split_disjoint_by_gold(
-        l1, train_n=0, probe_n=8, rng=rng,
-    )
+    # L1 is intentionally not probed for T9 (see header comment above).
+    l1_unused = list(l1)
     _, l2_probe, l2_unused = _split_disjoint_by_gold(
         l2, train_n=0, probe_n=8, rng=rng,
     )
     _, l3_probe, l3_unused = _split_disjoint_by_gold(
-        l3, train_n=0, probe_n=8, rng=rng,
+        l3, train_n=0, probe_n=16, rng=rng,
     )
     if l4:
         _, l4_probe, l4_unused = _split_disjoint_by_gold(
@@ -929,7 +937,7 @@ def _allocate_transfer_probe(
         l4_probe, l4_unused = [], []
     return (
         [],
-        l1_probe + l2_probe + l3_probe + l4_probe,
+        l2_probe + l3_probe + l4_probe,
         l1_unused + l2_unused + l3_unused + l4_unused,
     )
 
